@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-coral: #f49799;
+    --color-tan: #dfdac3;
+    --color-crimson: #be3519;
+    --color-chocolate: #522a25;
+    --color-cream: #ebdcc4;
+  }
+}
+
+body {
+  background-color: #dfdac3;
+  color: #522a25;
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Typography Utility Classes */
+.font-script {
+  font-family: var(--font-caveat), cursive;
+}
+
+.font-display {
+  font-family: var(--font-outfit), sans-serif;
+}
+
+/* Halftone Texture Overlay Effect */
+.halftone-dots {
+  background-image: radial-gradient(#be3519 20%, transparent 20%);
+  background-size: 8px 8px;
+}
+
+.halftone-dots-subtle {
+  background-image: radial-gradient(#be3519 15%, transparent 15%);
+  background-size: 6px 6px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #dfdac3;
+}
+::-webkit-scrollbar-thumb {
+  background: #be3519;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #522a25;
+}
+
+/* Outline Text Effect for PORTFOLIO */
+.text-outline-cream {
+  -webkit-text-stroke: 2px #ebdcc4;
+  color: transparent;
+}
+
+.text-outline-crimson {
+  -webkit-text-stroke: 1.5px #be3519;
+  color: transparent;
+}
+
+/* Speech Bubble Tail Effect */
+.speech-bubble {
+  position: relative;
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: #be3519 transparent;
+  display: block;
+  width: 0;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* White Sticker Outline & Shadow Effect (Matching Reference Image) */
+.sticker-white-cutout {
+  filter: drop-shadow(3px 0 0 #ffffff)
+          drop-shadow(-3px 0 0 #ffffff)
+          drop-shadow(0 3px 0 #ffffff)
+          drop-shadow(0 -3px 0 #ffffff)
+          drop-shadow(0 8px 16px rgba(82, 42, 37, 0.28));
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
+}
+
+.sticker-white-cutout:hover {
+  filter: drop-shadow(4px 0 0 #ffffff)
+          drop-shadow(-4px 0 0 #ffffff)
+          drop-shadow(0 4px 0 #ffffff)
+          drop-shadow(0 -4px 0 #ffffff)
+          drop-shadow(0 0 16px rgba(255, 255, 255, 0.8))
+          drop-shadow(0 12px 24px rgba(82, 42, 37, 0.35));
+}
+
+/* Infinite Marquee Animations for Members Carousel */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+

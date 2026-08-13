@@ -1,0 +1,2914 @@
+[
+  {
+    "id": "0:0",
+    "name": "Document",
+    "type": "DOCUMENT",
+    "depth": 0,
+    "childCount": 1
+  },
+  {
+    "id": "0:1",
+    "name": "Page 1",
+    "type": "CANVAS",
+    "depth": 1,
+    "childCount": 1
+  },
+  {
+    "id": "1:2905",
+    "name": "https://anshikapandey21.my.canva.site/portfolio - anshikapandey21_my_canva_site_portfolio_1920w_1440w_1024w_768w_390w_1536w_default.h2d by html.to.design ❤️ FREE version - 14/08/2026, 0:28:25 GMT+5:30",
+    "type": "SECTION",
+    "depth": 2,
+    "childCount": 1
+  },
+  {
+    "id": "1:2492",
+    "name": "1920w default",
+    "type": "FRAME",
+    "depth": 3,
+    "childCount": 2
+  },
+  {
+    "id": "1:2493",
+    "name": "Main",
+    "type": "FRAME",
+    "depth": 4,
+    "childCount": 2
+  },
+  {
+    "id": "1:2494",
+    "name": "Container",
+    "type": "FRAME",
+    "depth": 5,
+    "childCount": 6
+  },
+  {
+    "id": "1:2495",
+    "name": "Section",
+    "type": "FRAME",
+    "depth": 6,
+    "childCount": 1
+  },
+  {
+    "id": "1:2496",
+    "name": "Background",
+    "type": "FRAME",
+    "depth": 7,
+    "childCount": 18
+  },
+  {
+    "id": "1:2497",
+    "name": "Container",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2498",
+    "name": "Background",
+    "type": "RECTANGLE",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2539",
+    "name": "Portfolio",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2499",
+    "name": "Portfolio",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2500",
+    "name": "Container",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2501",
+    "name": "d19c814564aa4fd21b0651c619c5ca42.png",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2502",
+    "name": "Link → Read",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2503",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2504",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2505",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2506",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2507",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2508",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2509",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2510",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2511",
+    "name": "Link → about me",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2512",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2513",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2514",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2515",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2516",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2517",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2518",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2519",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2520",
+    "name": "Link → Work",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2521",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2522",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2523",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2524",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2525",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2526",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2527",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2528",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2529",
+    "name": "Link → contact",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2530",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2531",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2532",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2533",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2534",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2535",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2536",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2537",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2538",
+    "name": "Anshika Pandey",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2540",
+    "name": "Container",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2541",
+    "name": "23072acbfc4cf29805eb74da60b3a611.png",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2542",
+    "name": "Section",
+    "type": "FRAME",
+    "depth": 6,
+    "childCount": 1
+  },
+  {
+    "id": "1:2543",
+    "name": "Background",
+    "type": "FRAME",
+    "depth": 7,
+    "childCount": 31
+  },
+  {
+    "id": "1:2544",
+    "name": "Container",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2545",
+    "name": "Background",
+    "type": "RECTANGLE",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2546",
+    "name": "Mask Group",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2547",
+    "name": "Mask",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2548",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2549",
+    "name": "Container",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2550",
+    "name": "aecdaf2345a00215b382a3ebaa371f58.png",
+    "type": "FRAME",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2551",
+    "name": "Mask Group",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2552",
+    "name": "Mask",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2553",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2554",
+    "name": "Background",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2555",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2559",
+    "name": "Clip path group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 2
+  },
+  {
+    "id": "1:2557",
+    "name": "__id53",
+    "type": "GROUP",
+    "depth": 10,
+    "childCount": 1
+  },
+  {
+    "id": "1:2558",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 11,
+    "childCount": 0
+  },
+  {
+    "id": "1:2556",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2560",
+    "name": "Mask Group",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2561",
+    "name": "Mask",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2562",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2563",
+    "name": "Background",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2564",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2568",
+    "name": "Clip path group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 2
+  },
+  {
+    "id": "1:2566",
+    "name": "__id57",
+    "type": "GROUP",
+    "depth": 10,
+    "childCount": 1
+  },
+  {
+    "id": "1:2567",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 11,
+    "childCount": 0
+  },
+  {
+    "id": "1:2565",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2569",
+    "name": "e489703d-c39b-4fd8-ba6e-13fe0d820fed",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2570",
+    "name": "Mask Group",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2571",
+    "name": "Mask",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2572",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2573",
+    "name": "a1ae3ad55c745d2da1485e3eb9327d79.png",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2574",
+    "name": "Mask Group",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2575",
+    "name": "Mask",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2576",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2577",
+    "name": "love taking photos no one asked for",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2578",
+    "name": "and spiking volleyballs (sometimes into people, sorry)",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2579",
+    "name": "A Comp. Sci. major with a creative brain. If you want a person to text you unhinged- but-brilliant campaign ideas at 1 AM, you’ve found them.",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2580",
+    "name": "I",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2581",
+    "name": "write",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2582",
+    "name": "things",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2583",
+    "name": "people",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2584",
+    "name": "stop",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2585",
+    "name": "scrolling",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2586",
+    "name": "for.",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2587",
+    "name": "On",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2588",
+    "name": "purpose, mostly.",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2589",
+    "name": "Work ex 1 Founder’s Office",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2590",
+    "name": "Intern",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2591",
+    "name": "@VaultCircle",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2592",
+    "name": "Did a bit of everything - branding, strategy, writing, whatever the day needed. Executed end-to-end marketing strategy and ghostwriting. Ideated, scripted, and directed content.",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2593",
+    "name": "work ex 2 Content Lead",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2594",
+    "name": "@Breeze’25(Uni",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2595",
+    "name": "Cultech Fest)",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2596",
+    "name": "Content Strategy Captions Emails and Reachouts Team Management & Event Execution",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2597",
+    "name": "about me",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2598",
+    "name": "Section",
+    "type": "FRAME",
+    "depth": 6,
+    "childCount": 2
+  },
+  {
+    "id": "1:2599",
+    "name": "Background",
+    "type": "FRAME",
+    "depth": 7,
+    "childCount": 18
+  },
+  {
+    "id": "1:2600",
+    "name": "Container",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2601",
+    "name": "Background",
+    "type": "RECTANGLE",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2602",
+    "name": "Mask Group",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2603",
+    "name": "Mask",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2604",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2605",
+    "name": "Container",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2606",
+    "name": "da7db6028d997c5a5aa9024ea22e28b1.mp4",
+    "type": "FRAME",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2607",
+    "name": "Founder’s office intern",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2608",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2609",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2610",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2611",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2612",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2613",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2614",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2615",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2616",
+    "name": "vault circle",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2617",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2618",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2619",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2620",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2621",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2622",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2623",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2624",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2625",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2626",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2627",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 2
+  },
+  {
+    "id": "1:2628",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2629",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2630",
+    "name": "Mask Group",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2631",
+    "name": "Mask",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2632",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2633",
+    "name": "Background",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2634",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2638",
+    "name": "Clip path group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 2
+  },
+  {
+    "id": "1:2636",
+    "name": "__id103",
+    "type": "GROUP",
+    "depth": 10,
+    "childCount": 1
+  },
+  {
+    "id": "1:2637",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 11,
+    "childCount": 0
+  },
+  {
+    "id": "1:2635",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2639",
+    "name": "The challenge: Breaking through the noise.",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2640",
+    "name": "11280384bce4a116c8fc4ad0c7c9d0a6.png",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2641",
+    "name": "Mask Group",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2642",
+    "name": "Mask",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2643",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2644",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2645",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2646",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2647",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2648",
+    "name": "what our linkedin posts looked like",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2649",
+    "name": "Work ex 1",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2650",
+    "name": "Solution: Personalized Public Invites.",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2651",
+    "name": "Container",
+    "type": "FRAME",
+    "depth": 7,
+    "childCount": 1
+  },
+  {
+    "id": "1:2652",
+    "name": "Group - Video controls",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 6
+  },
+  {
+    "id": "1:2653",
+    "name": "Gradient",
+    "type": "RECTANGLE",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2654",
+    "name": "Button - Toggle mute → SVG",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2655",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2656",
+    "name": "Input - Seek bar",
+    "type": "RECTANGLE",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2657",
+    "name": "Button - Play",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2658",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 10,
+    "childCount": 1
+  },
+  {
+    "id": "1:2659",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 11,
+    "childCount": 0
+  },
+  {
+    "id": "1:2660",
+    "name": "Button - Pause",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2661",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 10,
+    "childCount": 2
+  },
+  {
+    "id": "1:2662",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 11,
+    "childCount": 0
+  },
+  {
+    "id": "1:2663",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 11,
+    "childCount": 0
+  },
+  {
+    "id": "1:2664",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2665",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2666",
+    "name": "Section",
+    "type": "FRAME",
+    "depth": 6,
+    "childCount": 1
+  },
+  {
+    "id": "1:2667",
+    "name": "Background",
+    "type": "FRAME",
+    "depth": 7,
+    "childCount": 13
+  },
+  {
+    "id": "1:2668",
+    "name": "Container",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2669",
+    "name": "Background",
+    "type": "RECTANGLE",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2670",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2671",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2672",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 2
+  },
+  {
+    "id": "1:2673",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2674",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2675",
+    "name": "Mask Group",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2676",
+    "name": "Mask",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2677",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2678",
+    "name": "Background",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2679",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2683",
+    "name": "Clip path group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 2
+  },
+  {
+    "id": "1:2681",
+    "name": "__id124",
+    "type": "GROUP",
+    "depth": 10,
+    "childCount": 1
+  },
+  {
+    "id": "1:2682",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 11,
+    "childCount": 0
+  },
+  {
+    "id": "1:2680",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2684",
+    "name": "What’s trending??",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2685",
+    "name": "11280384bce4a116c8fc4ad0c7c9d0a6.png",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2686",
+    "name": "Mask Group",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2687",
+    "name": "Mask",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2688",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2689",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2690",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2691",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2692",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2693",
+    "name": "a4653984478a1ac2cc60ccf767292af7.png",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2694",
+    "name": "bd530d1077c29cf29f3df950cfdc7b09.png",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2695",
+    "name": "bf477f7e5ce4853f08af90a149f8638f.png",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2696",
+    "name": "9f8b86852f677338f51b1f93fd8bae73.png",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2697",
+    "name": "2025 wrapped for linkedin",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2698",
+    "name": "Section",
+    "type": "FRAME",
+    "depth": 6,
+    "childCount": 1
+  },
+  {
+    "id": "1:2699",
+    "name": "Background",
+    "type": "FRAME",
+    "depth": 7,
+    "childCount": 34
+  },
+  {
+    "id": "1:2700",
+    "name": "Container",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2701",
+    "name": "Background",
+    "type": "RECTANGLE",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2702",
+    "name": "Mask Group",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2703",
+    "name": "Mask",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2704",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2705",
+    "name": "Background",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2706",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2707",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2708",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 3
+  },
+  {
+    "id": "1:2709",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2710",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2711",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2712",
+    "name": "Mask Group",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2713",
+    "name": "Mask",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2714",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2715",
+    "name": "Background",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2716",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2720",
+    "name": "Clip path group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 2
+  },
+  {
+    "id": "1:2718",
+    "name": "__id160",
+    "type": "GROUP",
+    "depth": 10,
+    "childCount": 1
+  },
+  {
+    "id": "1:2719",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 11,
+    "childCount": 0
+  },
+  {
+    "id": "1:2717",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2721",
+    "name": "Mask Group",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2722",
+    "name": "Mask",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2723",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2724",
+    "name": "Container",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2725",
+    "name": "fb60d20d36f9393f94d40e2281d35ab3.png",
+    "type": "FRAME",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2726",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2727",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2728",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2729",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2730",
+    "name": "92e6858f39cfd16ca919e53c868b5818.png",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2731",
+    "name": "Container",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2732",
+    "name": "d0bb3bb3579ae2607499e8549e080a34.png",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2733",
+    "name": "Mask Group",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2734",
+    "name": "Mask",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2735",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2736",
+    "name": "Mask Group",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2737",
+    "name": "Mask",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2738",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2739",
+    "name": "draft",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2740",
+    "name": "draft",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2741",
+    "name": "refine",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2742",
+    "name": "refine",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2743",
+    "name": "Container",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2744",
+    "name": "d0bb3bb3579ae2607499e8549e080a34.png",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2745",
+    "name": "Mask Group",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2746",
+    "name": "Mask",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2747",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2748",
+    "name": "8cae6436d95aec5b7fccbf036a2e2728.png",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2749",
+    "name": "Link → Link",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2750",
+    "name": "content work",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2751",
+    "name": "Read my work",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2752",
+    "name": "Heading 3",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 11
+  },
+  {
+    "id": "1:2753",
+    "name": "R",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2754",
+    "name": "e",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2755",
+    "name": "e",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2756",
+    "name": "l",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2757",
+    "name": "s",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2758",
+    "name": "c",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2759",
+    "name": "r",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2760",
+    "name": "i",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2761",
+    "name": "p",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2762",
+    "name": "t",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2763",
+    "name": "s",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2764",
+    "name": "Heading 3",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 12
+  },
+  {
+    "id": "1:2765",
+    "name": "g",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2766",
+    "name": "h",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2767",
+    "name": "o",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2768",
+    "name": "s",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2769",
+    "name": "t",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2770",
+    "name": "w",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2771",
+    "name": "r",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2772",
+    "name": "i",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2773",
+    "name": "t",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2774",
+    "name": "i",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2775",
+    "name": "n",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2776",
+    "name": "g",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2777",
+    "name": "Heading 3",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 8
+  },
+  {
+    "id": "1:2778",
+    "name": "c",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2779",
+    "name": "a",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2780",
+    "name": "p",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2781",
+    "name": "t",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2782",
+    "name": "i",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2783",
+    "name": "o",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2784",
+    "name": "n",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2785",
+    "name": "s",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2786",
+    "name": "Heading 3",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 10
+  },
+  {
+    "id": "1:2787",
+    "name": "c",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2788",
+    "name": "o",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2789",
+    "name": "l",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2790",
+    "name": "d",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2791",
+    "name": "e",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2792",
+    "name": "m",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2793",
+    "name": "a",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2794",
+    "name": "i",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2795",
+    "name": "l",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2796",
+    "name": "s",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2797",
+    "name": "Heading 3 → social",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2798",
+    "name": "Heading 3",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 14
+  },
+  {
+    "id": "1:2799",
+    "name": "e",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2800",
+    "name": "d",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2801",
+    "name": "i",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2802",
+    "name": "t",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2803",
+    "name": "o",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2804",
+    "name": "r",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2805",
+    "name": "i",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2806",
+    "name": "a",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2807",
+    "name": "l",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2808",
+    "name": "b",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2809",
+    "name": "l",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2810",
+    "name": "o",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2811",
+    "name": "g",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2812",
+    "name": "s",
+    "type": "TEXT",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2813",
+    "name": "Heading 3 → killer hooks",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2814",
+    "name": "writing process",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2815",
+    "name": "research",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2816",
+    "name": "research",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2817",
+    "name": "ideate",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2818",
+    "name": "ideate",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2819",
+    "name": "Container",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2820",
+    "name": "8cae6436d95aec5b7fccbf036a2e2728.png",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2821",
+    "name": "Section",
+    "type": "FRAME",
+    "depth": 6,
+    "childCount": 1
+  },
+  {
+    "id": "1:2822",
+    "name": "Background",
+    "type": "FRAME",
+    "depth": 7,
+    "childCount": 38
+  },
+  {
+    "id": "1:2823",
+    "name": "Container",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2824",
+    "name": "Background",
+    "type": "RECTANGLE",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2825",
+    "name": "Mask Group",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2826",
+    "name": "Mask",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2827",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2828",
+    "name": "Background",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2829",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2830",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2831",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2832",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2833",
+    "name": "Container",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2834",
+    "name": "535a6128ccd183c00158d7d1504bcfad.png",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2835",
+    "name": "Container",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2836",
+    "name": "03e3304a61f8d08fcb3579abb9b03038.png",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2837",
+    "name": "Mask Group",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2838",
+    "name": "Mask",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2839",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 10,
+    "childCount": 0
+  },
+  {
+    "id": "1:2840",
+    "name": "1a82a0ff25bd998d42c6db66a0b09087.png",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2841",
+    "name": "02cbb8971c67cc1aaa0e18b0f1653f97.png",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2842",
+    "name": "d653c21cabe56931dab854e43bcacbdd.png",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2843",
+    "name": "21bdbb3dafe7a312c43bdc59e1bbea33.png",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2844",
+    "name": "def4c23cc10240662db08fc5caf0874d.png",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2845",
+    "name": "S",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2846",
+    "name": "k",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2847",
+    "name": "i",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2848",
+    "name": "l",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2849",
+    "name": "l",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2850",
+    "name": "P",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2851",
+    "name": "i",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2852",
+    "name": "l",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2853",
+    "name": "l",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2854",
+    "name": "s",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2855",
+    "name": "S",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2856",
+    "name": "k",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2857",
+    "name": "i",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2858",
+    "name": "l",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2859",
+    "name": "l",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2860",
+    "name": "P",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2861",
+    "name": "i",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2862",
+    "name": "l",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2863",
+    "name": "l",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2864",
+    "name": "s",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2865",
+    "name": "0bd8d2cbba27d6ec5769e249cf303ca7.png",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2866",
+    "name": "df80e2bde8d78b24a7a62e51f44b2488.png",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2867",
+    "name": "Link → @anshika.img",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2868",
+    "name": "Link → Anshika Pandey",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2869",
+    "name": "Container",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2870",
+    "name": "5039a457ca0014ad4947a1bfc0332256.png",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2871",
+    "name": "Link → anshika.pandey.2706@gmail.com",
+    "type": "TEXT",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2872",
+    "name": "Container",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 1
+  },
+  {
+    "id": "1:2873",
+    "name": "23072acbfc4cf29805eb74da60b3a611.png",
+    "type": "FRAME",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2874",
+    "name": "Background",
+    "type": "FRAME",
+    "depth": 5,
+    "childCount": 3
+  },
+  {
+    "id": "1:2875",
+    "name": "Button → Terms & Support",
+    "type": "TEXT",
+    "depth": 6,
+    "childCount": 0
+  },
+  {
+    "id": "1:2876",
+    "name": "Button → Privacy Policy",
+    "type": "TEXT",
+    "depth": 6,
+    "childCount": 0
+  },
+  {
+    "id": "1:2877",
+    "name": "Link - Designed with Canva",
+    "type": "FRAME",
+    "depth": 6,
+    "childCount": 3
+  },
+  {
+    "id": "1:2878",
+    "name": "Background",
+    "type": "FRAME",
+    "depth": 7,
+    "childCount": 2
+  },
+  {
+    "id": "1:2879",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 8,
+    "childCount": 2
+  },
+  {
+    "id": "1:2880",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 9,
+    "childCount": 0
+  },
+  {
+    "id": "1:2881",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 9,
+    "childCount": 1
+  },
+  {
+    "id": "1:2882",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 10,
+    "childCount": 8
+  },
+  {
+    "id": "1:2883",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 11,
+    "childCount": 1
+  },
+  {
+    "id": "1:2884",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 12,
+    "childCount": 0
+  },
+  {
+    "id": "1:2885",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 11,
+    "childCount": 1
+  },
+  {
+    "id": "1:2886",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 12,
+    "childCount": 0
+  },
+  {
+    "id": "1:2887",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 11,
+    "childCount": 1
+  },
+  {
+    "id": "1:2888",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 12,
+    "childCount": 0
+  },
+  {
+    "id": "1:2889",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 11,
+    "childCount": 1
+  },
+  {
+    "id": "1:2890",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 12,
+    "childCount": 0
+  },
+  {
+    "id": "1:2891",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 11,
+    "childCount": 1
+  },
+  {
+    "id": "1:2892",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 12,
+    "childCount": 0
+  },
+  {
+    "id": "1:2893",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 11,
+    "childCount": 1
+  },
+  {
+    "id": "1:2894",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 12,
+    "childCount": 0
+  },
+  {
+    "id": "1:2895",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 11,
+    "childCount": 1
+  },
+  {
+    "id": "1:2896",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 12,
+    "childCount": 0
+  },
+  {
+    "id": "1:2897",
+    "name": "Group",
+    "type": "GROUP",
+    "depth": 11,
+    "childCount": 1
+  },
+  {
+    "id": "1:2898",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 12,
+    "childCount": 0
+  },
+  {
+    "id": "1:2899",
+    "name": "Gradient",
+    "type": "RECTANGLE",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2900",
+    "name": "Designed with",
+    "type": "TEXT",
+    "depth": 7,
+    "childCount": 0
+  },
+  {
+    "id": "1:2901",
+    "name": "SVG",
+    "type": "FRAME",
+    "depth": 7,
+    "childCount": 1
+  },
+  {
+    "id": "1:2902",
+    "name": "Vector",
+    "type": "VECTOR",
+    "depth": 8,
+    "childCount": 0
+  },
+  {
+    "id": "1:2903",
+    "name": "Container",
+    "type": "FRAME",
+    "depth": 4,
+    "childCount": 1
+  },
+  {
+    "id": "1:2904",
+    "name": "Toggle mute",
+    "type": "TEXT",
+    "depth": 5,
+    "childCount": 0
+  }
+]

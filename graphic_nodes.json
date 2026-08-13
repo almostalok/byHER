@@ -1,0 +1,577 @@
+[
+  {
+    "id": "1:2503",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2504",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2506",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2507",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2508",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2510",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2512",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2513",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2515",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2516",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2517",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2519",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2521",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2522",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2524",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2525",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2526",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2528",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2530",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2531",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2533",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2534",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2535",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2537",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2548",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2553",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2555",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2558",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2556",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2562",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2564",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2567",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2565",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2572",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2576",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2604",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2608",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2609",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2611",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2612",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2613",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2615",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2617",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2618",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2620",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2621",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2622",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2624",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2625",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2626",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2628",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2629",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2632",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2634",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2637",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2635",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2643",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2644",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2645",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2647",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2654",
+    "name": "Button - Toggle mute → SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2655",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2658",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2659",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2661",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2662",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2663",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2664",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2665",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2670",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2671",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2673",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2674",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2677",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2679",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2682",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2680",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2688",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2689",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2690",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2692",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2704",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2706",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2707",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2709",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2710",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2711",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2714",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2716",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2719",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2717",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2723",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2726",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2727",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2729",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2735",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2738",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2747",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2827",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2829",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2830",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2832",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2839",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2879",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2880",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2884",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2886",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2888",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2890",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2892",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2894",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2896",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2898",
+    "name": "Vector",
+    "type": "VECTOR"
+  },
+  {
+    "id": "1:2901",
+    "name": "SVG",
+    "type": "FRAME"
+  },
+  {
+    "id": "1:2902",
+    "name": "Vector",
+    "type": "VECTOR"
+  }
+]
