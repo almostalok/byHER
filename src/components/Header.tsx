@@ -28,35 +28,35 @@ export default function Header() {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-widest text-[#be3519]">
+        <nav className="hidden md:flex items-center space-x-6 text-xs sm:text-sm font-bold tracking-[0.2em] text-[#be3519]">
           <a 
             href="#about" 
-            className="hover:underline underline-offset-4 hover:text-[#522a25] transition-colors uppercase"
+            className="py-1 px-2 border-b-2 border-transparent hover:border-dashed hover:border-[#be3519] hover:text-[#522a25] transition-all uppercase"
           >
             ABOUT US
           </a>
-          <span className="text-[#be3519]/40">|</span>
+          <span className="text-[#be3519]/40">◆</span>
           <a 
             href="#projects" 
-            className="hover:underline underline-offset-4 hover:text-[#522a25] transition-colors uppercase"
+            className="py-1 px-2 border-b-2 border-transparent hover:border-dashed hover:border-[#be3519] hover:text-[#522a25] transition-all uppercase"
           >
             PROJECTS
           </a>
-          <span className="text-[#be3519]/40">|</span>
+          <span className="text-[#be3519]/40">◆</span>
           <a 
             href="#contact" 
-            className="hover:underline underline-offset-4 hover:text-[#522a25] transition-colors uppercase"
+            className="py-1 px-2 border-b-2 border-transparent hover:border-dashed hover:border-[#be3519] hover:text-[#522a25] transition-all uppercase"
           >
             CONTACT
           </a>
-          <span className="text-[#be3519]/40">|</span>
+          <span className="text-[#be3519]/40">◆</span>
           <a 
             href={READ_DOC_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 hover:underline underline-offset-4 hover:text-[#522a25] transition-colors uppercase text-[#be3519] font-bold"
+            className="inline-flex items-center gap-1 bg-[#be3519] text-[#ebdcc4] px-4 py-1.5 rounded-full hover:bg-[#522a25] transition-colors uppercase font-bold tracking-widest shadow-sm"
           >
-            READ <ExternalLink size={14} />
+            READ <ExternalLink size={13} />
           </a>
         </nav>
 

@@ -30,7 +30,7 @@ export default function NotesSkillPillsSection({ onSelectImage }: NotesProps) {
             className="lg:col-span-6 space-y-6"
           >
             <div className="border-b-2 border-dashed border-[#be3519] pb-3 flex items-center justify-between">
-              <h3 className="font-display font-bold text-2xl sm:text-3xl text-[#522a25] tracking-tight">
+              <h3 className="font-serif italic font-bold text-2xl sm:text-3xl text-[#522a25] tracking-tight">
                 notes from the lab & terminal
               </h3>
               <span className="font-mono text-xs text-[#be3519] uppercase tracking-widest font-bold">

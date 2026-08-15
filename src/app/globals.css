@@ -13,17 +13,29 @@
 body {
   background-color: #dfdac3;
   color: #522a25;
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-display), sans-serif;
   overflow-x: hidden;
 }
 
 /* Custom Typography Utility Classes */
 .font-script {
-  font-family: var(--font-caveat), cursive;
+  font-family: var(--font-script), cursive;
+}
+
+.font-condensed {
+  font-family: var(--font-condensed), sans-serif;
 }
 
 .font-display {
-  font-family: var(--font-outfit), sans-serif;
+  font-family: var(--font-display), sans-serif;
+}
+
+.font-serif {
+  font-family: var(--font-serif), serif;
+}
+
+.font-space {
+  font-family: var(--font-space), monospace;
 }
 
 /* Halftone Texture Overlay Effect */

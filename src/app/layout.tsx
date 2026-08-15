@@ -1,23 +1,39 @@
 import type { Metadata } from 'next';
-import { Caveat, Outfit, Inter } from 'next/font/google';
+import { Satisfy, Bebas_Neue, Plus_Jakarta_Sans, Playfair_Display, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 
-const caveat = Caveat({
+const satisfy = Satisfy({
   subsets: ['latin'],
-  variable: '--font-caveat',
+  variable: '--font-script',
+  weight: ['400'],
   display: 'swap',
 });
 
-const outfit = Outfit({
+const bebasNeue = Bebas_Neue({
   subsets: ['latin'],
-  variable: '--font-outfit',
-  weight: ['400', '600', '700', '800', '900'],
+  variable: '--font-condensed',
+  weight: ['400'],
   display: 'swap',
 });
 
-const inter = Inter({
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-display',
+  weight: ['400', '500', '600', '700', '800'],
+  display: 'swap',
+});
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-serif',
+  weight: ['400', '600', '700', '800'],
+  display: 'swap',
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space',
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
 });
 
@@ -53,8 +69,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${caveat.variable} ${outfit.variable} ${inter.variable}`}>
-      <body className="antialiased min-h-screen selection:bg-[#be3519] selection:text-[#ebdcc4]">
+    <html 
+      lang="en" 
+      className={`${satisfy.variable} ${bebasNeue.variable} ${plusJakarta.variable} ${playfair.variable} ${spaceGrotesk.variable}`}
+    >
+      <body className="antialiased min-h-screen selection:bg-[#be3519] selection:text-[#ebdcc4] font-display">
         {children}
       </body>
     </html>
