@@ -1,18 +1,23 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Cpu, Code2, Sparkles, Zap, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Cpu, Code2, Sparkles, Zap, ArrowRight, CheckCircle2, Bookmark } from 'lucide-react';
+import { useRetroAudio } from '@/lib/useRetroAudio';
 
 export default function AboutSection() {
+  const { playClick } = useRetroAudio();
+
   return (
     <section id="about" className="relative w-screen min-w-[100vw] h-full flex-shrink-0 snap-start snap-always bg-[#dfdac3] border-r-2 border-dashed border-[#be3519]/40 flex flex-col justify-center py-6 px-6 sm:px-12 lg:px-16 overflow-y-auto select-none">
-      <div className="max-w-7xl mx-auto w-full space-y-6 lg:space-y-8 my-auto">
+      
+      {/* Section Background Stipple Texture Grid Accent */}
+      <div className="max-w-7xl mx-auto w-full space-y-6 lg:space-y-8 my-auto relative z-10">
         
         {/* Section Header */}
         <div className="flex items-center justify-between border-b-2 border-dashed border-[#be3519]/40 pb-3">
           <div className="flex items-center gap-3">
-            <span className="bg-[#be3519] text-[#ebdcc4] font-display font-black text-xs px-3 py-1 rounded-full uppercase tracking-widest shadow-sm">
-              01 / WHO WE ARE
+            <span className="bg-[#be3519] text-[#ebdcc4] font-display font-black text-xs px-3 py-1 rounded-full uppercase tracking-widest shadow-sm flex items-center gap-1.5">
+              <Bookmark size={12} /> 01 / WHO WE ARE
             </span>
             <motion.h2 
               initial={{ opacity: 0, x: -20 }}
@@ -35,7 +40,7 @@ export default function AboutSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          {/* Left Collage Container (Cols 1-5) */}
+          {/* Left Scrapbook Collage Container (Cols 1-5) */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -61,8 +66,12 @@ export default function AboutSection() {
               />
             </div>
 
-            {/* byHER Team Members Software Discussion Photo */}
+            {/* byHER Team Members Software Discussion Photo with Tape Corners */}
             <div className="relative w-[300px] h-[360px] sm:w-[330px] sm:h-[390px] rounded-3xl overflow-hidden border-4 border-[#be3519] shadow-2xl z-10 my-3 bg-[#dfdac3] group">
+              {/* Retro Corner Tape Strips */}
+              <div className="absolute -top-2 left-6 z-30 w-16 h-6 bg-[#ebdcc4]/80 border border-[#be3519]/40 transform -rotate-6 shadow-sm" />
+              <div className="absolute -bottom-2 right-6 z-30 w-16 h-6 bg-[#ebdcc4]/80 border border-[#be3519]/40 transform rotate-6 shadow-sm" />
+
               <img 
                 src="/assets/about_portrait.png" 
                 alt="byHER Team Members collaborating on software project" 
@@ -161,9 +170,10 @@ export default function AboutSection() {
               
               {/* Card 1: Hardware Engineering */}
               <motion.div 
+                onClick={playClick}
                 whileHover={{ y: -4, scale: 1.02 }}
                 transition={{ duration: 0.2 }}
-                className="space-y-3 bg-[#f4ebd0] p-4 rounded-2xl border-2 border-[#be3519]/30 shadow-md relative overflow-hidden"
+                className="space-y-3 bg-[#f4ebd0] p-4 rounded-2xl border-2 border-[#be3519]/30 shadow-md relative overflow-hidden cursor-pointer"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
@@ -203,9 +213,10 @@ export default function AboutSection() {
 
               {/* Card 2: Software Collective */}
               <motion.div 
+                onClick={playClick}
                 whileHover={{ y: -4, scale: 1.02 }}
                 transition={{ duration: 0.2 }}
-                className="space-y-3 bg-[#f4ebd0] p-4 rounded-2xl border-2 border-[#be3519]/30 shadow-md relative overflow-hidden"
+                className="space-y-3 bg-[#f4ebd0] p-4 rounded-2xl border-2 border-[#be3519]/30 shadow-md relative overflow-hidden cursor-pointer"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
@@ -253,8 +264,3 @@ export default function AboutSection() {
     </section>
   );
 }
-
-
-
-
-
