@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 import Header from '@/components/Header';
+import { useRetroAudio } from '@/lib/useRetroAudio';
+import confetti from 'canvas-confetti';
 
 const HERO_MEMBERS = [
   { id: '1', name: 'Anshika', role: 'hardware & 0➔1', tilt: '-rotate-2', image: '/assets/hero_portrait_1.png' },
@@ -16,17 +18,35 @@ const HERO_MEMBERS = [
 
 interface HeroSectionProps {
   onNavigate?: (sectionId: string) => void;
+  onToggleCrt?: () => void;
+  isCrtOn?: boolean;
+  onOpenCheats?: () => void;
 }
 
-export default function HeroSection({ onNavigate }: HeroSectionProps) {
-  // Seamless loop by duplicating the member list
+export default function HeroSection({ onNavigate, onToggleCrt, isCrtOn, onOpenCheats }: HeroSectionProps) {
   const loopMembers = [...HERO_MEMBERS, ...HERO_MEMBERS];
+  const { playQuack } = useRetroAudio();
+
+  const handleDuckClick = () => {
+    playQuack();
+    confetti({
+      particleCount: 25,
+      spread: 60,
+      origin: { x: 0.15, y: 0.3 },
+      colors: ['#be3519', '#f49799', '#ebdcc4'],
+    });
+  };
 
   return (
     <section id="hero" className="relative w-screen min-w-[100vw] h-full flex-shrink-0 snap-start snap-always bg-[#f49799] overflow-hidden flex flex-col justify-between pt-0 pb-0 select-none border-r-2 border-dashed border-[#be3519]/40">
       
       {/* Navigation Header stuck inside Hero Section */}
-      <Header onNavigate={onNavigate} />
+      <Header 
+        onNavigate={onNavigate} 
+        onToggleCrt={onToggleCrt} 
+        isCrtOn={isCrtOn} 
+        onOpenCheats={onOpenCheats} 
+      />
 
       {/* Top Retro Ledger Banner / Ticker Header */}
       <div className="w-full px-4 sm:px-8 z-20 pt-2">
@@ -64,6 +84,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
         
         {/* Floating Pink Rubber Duck Mascot with Interactive Quack Note */}
         <motion.div 
+          onClick={handleDuckClick}
           initial={{ y: 0, rotate: -5 }}
           animate={{ y: [-6, 6, -6], rotate: [-6, 4, -6] }}
           transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
@@ -76,7 +97,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
           />
           {/* Micro Quack Bubble */}
           <div className="absolute -top-3 -right-6 bg-[#dfdac3] border border-[#be3519] rounded-full px-2 py-0.5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-            <span className="font-script text-xs text-[#be3519] font-bold whitespace-nowrap">quack! ⚡</span>
+            <span className="font-script text-xs text-[#be3519] font-bold whitespace-nowrap">quack! ⚡ (click me)</span>
           </div>
         </motion.div>
 

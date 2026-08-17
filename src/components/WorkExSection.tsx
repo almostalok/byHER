@@ -2,9 +2,11 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, ArrowRight, CheckCircle, GraduationCap, Trophy, Layers, Cpu } from 'lucide-react';
+import { Sparkles, ArrowRight, CheckCircle, GraduationCap, Trophy, Cpu } from 'lucide-react';
 import AlmostHackModal from '@/components/AlmostHackModal';
 import KloaModal from '@/components/KloaModal';
+import { useRetroAudio } from '@/lib/useRetroAudio';
+import confetti from 'canvas-confetti';
 
 interface WorkExProps {
   onSelectImage?: (imgUrl: string, title: string) => void;
@@ -14,6 +16,7 @@ export default function WorkExSection({ onSelectImage }: WorkExProps) {
   const [activeTab, setActiveTab] = useState<'both' | 'almosthack' | 'kloa'>('both');
   const [isAlmostHackModalOpen, setIsAlmostHackModalOpen] = useState(false);
   const [isKloaModalOpen, setIsKloaModalOpen] = useState(false);
+  const { playClick, playSuccess } = useRetroAudio();
 
   // Forms state
   const [almostHackEmail, setAlmostHackEmail] = useState('');
@@ -26,6 +29,13 @@ export default function WorkExSection({ onSelectImage }: WorkExProps) {
     e.preventDefault();
     if (almostHackEmail.trim()) {
       setIsAlmostHackSubmitted(true);
+      playSuccess();
+      confetti({
+        particleCount: 50,
+        spread: 70,
+        origin: { y: 0.6 },
+        colors: ['#be3519', '#ebdcc4', '#f49799'],
+      });
     }
   };
 
@@ -33,6 +43,13 @@ export default function WorkExSection({ onSelectImage }: WorkExProps) {
     e.preventDefault();
     if (kloaEmail.trim()) {
       setIsKloaSubmitted(true);
+      playSuccess();
+      confetti({
+        particleCount: 50,
+        spread: 70,
+        origin: { y: 0.6 },
+        colors: ['#be3519', '#ebdcc4', '#522a25'],
+      });
     }
   };
 
@@ -60,7 +77,10 @@ export default function WorkExSection({ onSelectImage }: WorkExProps) {
           {/* Interactive Project Switcher Tabs */}
           <div className="flex items-center gap-1.5 bg-[#dfdac3] border-2 border-dashed border-[#be3519] p-1 rounded-full text-xs font-bold">
             <button
-              onClick={() => setActiveTab('both')}
+              onClick={() => {
+                playClick();
+                setActiveTab('both');
+              }}
               className={`px-3 py-1 rounded-full transition-all cursor-pointer uppercase tracking-wider text-[11px] ${
                 activeTab === 'both'
                   ? 'bg-[#be3519] text-[#ebdcc4] shadow-sm'
@@ -71,7 +91,10 @@ export default function WorkExSection({ onSelectImage }: WorkExProps) {
             </button>
 
             <button
-              onClick={() => setActiveTab('almosthack')}
+              onClick={() => {
+                playClick();
+                setActiveTab('almosthack');
+              }}
               className={`px-3 py-1 rounded-full transition-all cursor-pointer uppercase tracking-wider text-[11px] flex items-center gap-1 ${
                 activeTab === 'almosthack'
                   ? 'bg-[#be3519] text-[#ebdcc4] shadow-sm'
@@ -82,7 +105,10 @@ export default function WorkExSection({ onSelectImage }: WorkExProps) {
             </button>
 
             <button
-              onClick={() => setActiveTab('kloa')}
+              onClick={() => {
+                playClick();
+                setActiveTab('kloa');
+              }}
               className={`px-3 py-1 rounded-full transition-all cursor-pointer uppercase tracking-wider text-[11px] flex items-center gap-1 ${
                 activeTab === 'kloa'
                   ? 'bg-[#be3519] text-[#ebdcc4] shadow-sm'
@@ -197,7 +223,10 @@ export default function WorkExSection({ onSelectImage }: WorkExProps) {
 
               {/* Action Trigger Modal Button */}
               <button
-                onClick={() => setIsAlmostHackModalOpen(true)}
+                onClick={() => {
+                  playClick();
+                  setIsAlmostHackModalOpen(true);
+                }}
                 className="w-full bg-[#be3519] hover:bg-[#522a25] text-[#ebdcc4] py-2.5 px-4 rounded-xl font-display font-black text-xs sm:text-sm uppercase tracking-widest shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Cpu size={16} /> PREVIEW ALMOSTHACK HOSTING SPECS ➔
@@ -306,7 +335,10 @@ export default function WorkExSection({ onSelectImage }: WorkExProps) {
 
               {/* Action Trigger Modal Button */}
               <button
-                onClick={() => setIsKloaModalOpen(true)}
+                onClick={() => {
+                  playClick();
+                  setIsKloaModalOpen(true);
+                }}
                 className="w-full bg-[#be3519] hover:bg-[#522a25] text-[#ebdcc4] py-2.5 px-4 rounded-xl font-display font-black text-xs sm:text-sm uppercase tracking-widest shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <GraduationCap size={16} /> PREVIEW KLOA CAMPUS SPECS ➔

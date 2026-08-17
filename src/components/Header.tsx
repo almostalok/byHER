@@ -1,19 +1,25 @@
 'use client';
 
 import { useState } from 'react';
-import { Menu, X, ExternalLink } from 'lucide-react';
+import { Menu, X, ExternalLink, Volume2, VolumeX, Monitor, Gamepad2 } from 'lucide-react';
+import { useRetroAudio } from '@/lib/useRetroAudio';
 
 const READ_DOC_URL = 'https://docs.google.com/document/d/15-QOa-XTIeh0FHPbKWlyB_-RjzsE-NUJkjcHn3QO_qs/edit?usp=sharing';
 
 interface HeaderProps {
   onNavigate?: (sectionId: string) => void;
+  onToggleCrt?: () => void;
+  isCrtOn?: boolean;
+  onOpenCheats?: () => void;
 }
 
-export default function Header({ onNavigate }: HeaderProps) {
+export default function Header({ onNavigate, onToggleCrt, isCrtOn = false, onOpenCheats }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { isMuted, toggleMute, playClick } = useRetroAudio();
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
     e.preventDefault();
+    playClick();
     setMobileMenuOpen(false);
     if (onNavigate) {
       onNavigate(sectionId);
@@ -26,7 +32,7 @@ export default function Header({ onNavigate }: HeaderProps) {
   };
 
   return (
-    <header className="w-full bg-[#f49799] border-b border-[#be3519]/20 h-20 flex-shrink-0">
+    <header className="w-full bg-[#f49799] border-b border-[#be3519]/20 h-20 flex-shrink-0 relative z-30 select-none">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
         
         {/* Brand Logo / Signature with byHER Icon */}
@@ -46,7 +52,7 @@ export default function Header({ onNavigate }: HeaderProps) {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6 text-xs sm:text-sm font-bold tracking-[0.2em] text-[#be3519]">
+        <nav className="hidden md:flex items-center space-x-5 text-xs sm:text-sm font-bold tracking-[0.2em] text-[#be3519]">
           <a 
             href="#about" 
             onClick={(e) => handleNavClick(e, 'about')}
@@ -78,20 +84,66 @@ export default function Header({ onNavigate }: HeaderProps) {
           >
             CONTACT
           </a>
+
           <span className="text-[#be3519]/40">◆</span>
-          <a 
-            href={READ_DOC_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 bg-[#be3519] text-[#ebdcc4] px-4 py-1.5 rounded-full hover:bg-[#522a25] transition-colors uppercase font-bold tracking-widest shadow-sm"
-          >
-            READ <ExternalLink size={13} />
-          </a>
+
+          {/* RETRO EXPERIENCE TOGGLE BUTTONS */}
+          <div className="flex items-center gap-2 pl-2">
+            {/* Sound FX Toggle */}
+            <button
+              onClick={() => {
+                playClick();
+                toggleMute();
+              }}
+              className="bg-[#dfdac3] text-[#be3519] border border-[#be3519] hover:bg-[#be3519] hover:text-[#ebdcc4] p-1.5 rounded-full transition-colors cursor-pointer shadow-xs flex items-center gap-1 text-[11px] px-2.5 font-mono"
+              title="Toggle Retro Sound Effects [Key: M]"
+            >
+              {isMuted ? <VolumeX size={14} /> : <Volume2 size={14} />}
+              <span className="hidden lg:inline">{isMuted ? 'MUTED' : 'SOUND'}</span>
+            </button>
+
+            {/* CRT FX Toggle */}
+            {onToggleCrt && (
+              <button
+                onClick={() => {
+                  playClick();
+                  onToggleCrt();
+                }}
+                className={`border p-1.5 rounded-full transition-colors cursor-pointer shadow-xs flex items-center gap-1 text-[11px] px-2.5 font-mono ${
+                  isCrtOn
+                    ? 'bg-[#be3519] text-[#ebdcc4] border-[#522a25]'
+                    : 'bg-[#dfdac3] text-[#be3519] border-[#be3519] hover:bg-[#be3519] hover:text-[#ebdcc4]'
+                }`}
+                title="Toggle 90s CRT Monitor Filter [Key: R]"
+              >
+                <Monitor size={14} />
+                <span className="hidden lg:inline">{isCrtOn ? 'CRT ON' : 'CRT FX'}</span>
+              </button>
+            )}
+
+            {/* Cheats Modal Toggle */}
+            {onOpenCheats && (
+              <button
+                onClick={() => {
+                  playClick();
+                  onOpenCheats();
+                }}
+                className="bg-[#be3519] text-[#ebdcc4] border border-[#522a25] hover:bg-[#522a25] p-1.5 rounded-full transition-colors cursor-pointer shadow-xs flex items-center gap-1 text-[11px] px-2.5 font-mono"
+                title="View Keyboard Cheat Sheet [Key: ?]"
+              >
+                <Gamepad2 size={14} />
+                <span className="hidden lg:inline">KEYS</span>
+              </button>
+            )}
+          </div>
         </nav>
 
         {/* Mobile Menu Button */}
         <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          onClick={() => {
+            playClick();
+            setMobileMenuOpen(!mobileMenuOpen);
+          }}
           className="md:hidden p-2 text-[#522a25] hover:text-[#be3519] focus:outline-none"
           aria-label="Toggle menu"
         >
@@ -130,19 +182,34 @@ export default function Header({ onNavigate }: HeaderProps) {
           >
             CONTACT
           </a>
-          <a 
-            href={READ_DOC_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setMobileMenuOpen(false)}
-            className="inline-flex items-center gap-1 text-lg font-bold text-[#ebdcc4] bg-[#be3519] px-6 py-2 rounded-full uppercase tracking-widest shadow-md"
-          >
-            JOIN US <ExternalLink size={16} />
-          </a>
+          
+          <div className="flex items-center justify-center gap-3 pt-2">
+            <button
+              onClick={() => {
+                playClick();
+                toggleMute();
+              }}
+              className="bg-[#be3519] text-[#ebdcc4] px-4 py-2 rounded-full font-mono text-xs font-bold flex items-center gap-1.5"
+            >
+              {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
+              <span>{isMuted ? 'SOUND OFF' : 'SOUND ON'}</span>
+            </button>
+
+            {onToggleCrt && (
+              <button
+                onClick={() => {
+                  playClick();
+                  onToggleCrt();
+                }}
+                className="bg-[#be3519] text-[#ebdcc4] px-4 py-2 rounded-full font-mono text-xs font-bold flex items-center gap-1.5"
+              >
+                <Monitor size={16} />
+                <span>{isCrtOn ? 'CRT ON' : 'CRT OFF'}</span>
+              </button>
+            )}
+          </div>
         </div>
       )}
     </header>
   );
 }
-
-
