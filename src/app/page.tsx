@@ -29,6 +29,12 @@ export default function Home() {
     if (!container) return;
 
     const handleWheel = (e: WheelEvent) => {
+      // Do NOT intercept vertical wheel scrolling if user is scrolling inside a modal or scrollable popup
+      const target = e.target as HTMLElement | null;
+      if (target && target.closest('.overflow-y-auto, [role="dialog"], .modal-scroll-area')) {
+        return;
+      }
+
       // If user scrolls vertically with mouse wheel, translate to horizontal scroll
       if (Math.abs(e.deltaY) > Math.abs(e.deltaX) && !e.shiftKey) {
         e.preventDefault();

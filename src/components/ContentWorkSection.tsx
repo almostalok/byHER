@@ -1,11 +1,13 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
-
-const READ_DOC_URL = 'https://docs.google.com/document/d/15-QOa-XTIeh0FHPbKWlyB_-RjzsE-NUJkjcHn3QO_qs/edit?usp=sharing';
+import { FileText } from 'lucide-react';
+import HowWeBuildModal from '@/components/HowWeBuildModal';
 
 export default function ContentWorkSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section id="content-work" className="relative w-screen min-w-[100vw] h-full flex-shrink-0 snap-start snap-always bg-[#dfdac3] border-r-2 border-dashed border-[#be3519]/40 flex flex-col justify-between pt-6 pb-4 px-6 sm:px-12 lg:px-16 overflow-y-auto select-none">
       <div className="max-w-7xl mx-auto w-full space-y-6 my-auto">
@@ -13,7 +15,7 @@ export default function ContentWorkSection() {
         {/* Top Grid: Bench Photo vs Read Manifesto Computer */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
-          {/* Left Column: Bench Photo & Collective Builders (Cols 1-7) */}
+          {/* Left Column: Group Photo & Collective Builders (Cols 1-7) */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -30,17 +32,17 @@ export default function ContentWorkSection() {
               </span>
             </div>
 
-            {/* Bench Cutout Image */}
+            {/* Group Ideating & Building Photo */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-[#be3519] bg-[#dfdac3] max-h-[260px] sm:max-h-[300px]">
               <img 
-                src="/assets/content_work_bench.png" 
-                alt="byHER Collective in the Lab" 
+                src="/assets/girls_ideating_group.png" 
+                alt="byHER Collective Girls Ideating and Discussing Projects" 
                 className="w-full h-full object-cover"
               />
             </div>
           </motion.div>
 
-          {/* Right Column: Read Manifesto Link (Cols 8-12) */}
+          {/* Right Column: Read Manifesto Handbook Single Trigger (Cols 8-12) */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -61,20 +63,18 @@ export default function ContentWorkSection() {
               />
             </div>
 
-            {/* Oval Clickable Link Button */}
-            <a
-              href={READ_DOC_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative inline-flex items-center justify-center bg-[#dfdac3] border-3 border-[#be3519] rounded-full px-8 py-3 shadow-xl hover:bg-[#be3519] transition-all duration-300 hover:scale-105"
+            {/* THE ONE SINGLE POPUP HANDBOOK TRIGGER BUTTON */}
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="group relative inline-flex items-center justify-center bg-[#be3519] hover:bg-[#522a25] text-[#ebdcc4] border-2 border-[#522a25] rounded-full px-8 py-3 shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer"
             >
-              <span className="font-script text-2xl text-[#be3519] group-hover:text-[#ebdcc4] font-bold tracking-wide flex items-center gap-2">
-                Manifesto <ExternalLink size={20} />
+              <span className="font-script text-2xl font-bold tracking-wide flex items-center gap-2">
+                Open Handbook Doc <FileText size={20} />
               </span>
-            </a>
+            </button>
 
             <p className="text-[10px] sm:text-xs font-bold text-[#522a25] uppercase tracking-widest">
-              Read the byHER Zero-to-One Handbook
+              Read the byHER Zero-to-One Specification & Handbook
             </p>
           </motion.div>
 
@@ -83,7 +83,7 @@ export default function ContentWorkSection() {
       </div>
 
       {/* Bottom Coral Pink Banner: 0-TO-1 BUILD PROCESS */}
-      <div className="w-full bg-[#f49799] py-4 px-4 rounded-xl border-2 border-[#be3519] mt-4">
+      <div className="w-full max-w-7xl mx-auto bg-[#f49799] py-3.5 px-4 rounded-xl border-2 border-[#be3519] mt-4 mb-16 sm:mb-12 shadow-md">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           
           {/* Title with Push Pin */}
@@ -101,8 +101,8 @@ export default function ContentWorkSection() {
             </h3>
           </div>
 
-          {/* Interactive Step Flow Diagram */}
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-center">
+          {/* Step Flow Diagram */}
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-center pr-0 md:pr-32">
             
             {/* Step 1: research */}
             <div className="flex items-center space-x-2">
@@ -139,8 +139,12 @@ export default function ContentWorkSection() {
 
         </div>
       </div>
+
+      {/* Real Handbook Document Popup Modal */}
+      <HowWeBuildModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </section>
   );
 }
-
-
