@@ -16,8 +16,8 @@ export default function NotesSkillPillsSection({ onSelectImage }: NotesProps) {
   ];
 
   return (
-    <section className="relative w-full bg-[#dfdac3] py-16 lg:py-24 border-b-2 border-[#be3519]/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="notes" className="relative w-[92vw] sm:w-[88vw] lg:w-[980px] xl:w-[1100px] h-full flex-shrink-0 bg-[#dfdac3] border-r-2 border-dashed border-[#be3519]/40 flex flex-col justify-center py-6 px-4 sm:px-8 lg:px-10 overflow-y-auto lg:overflow-visible select-none">
+      <div className="w-full space-y-6 my-auto">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           

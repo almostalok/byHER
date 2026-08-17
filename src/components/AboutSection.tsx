@@ -4,21 +4,21 @@ import { motion } from 'framer-motion';
 
 export default function AboutSection() {
   return (
-    <section id="about" className="relative w-full bg-[#dfdac3] py-16 lg:py-24 border-b-2 border-[#be3519]/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section id="about" className="relative w-[92vw] sm:w-[88vw] lg:w-[980px] xl:w-[1100px] h-full flex-shrink-0 bg-[#dfdac3] border-r-2 border-dashed border-[#be3519]/40 flex flex-col justify-center py-6 px-4 sm:px-8 lg:px-10 overflow-y-auto lg:overflow-visible select-none">
+      <div className="w-full space-y-6 lg:space-y-8 my-auto">
         
         {/* Section Header */}
-        <div className="flex items-center justify-between border-b-2 border-dashed border-[#be3519]/40 pb-4">
+        <div className="flex items-center justify-between border-b-2 border-dashed border-[#be3519]/40 pb-3">
           <motion.h2 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="font-display font-black text-3xl sm:text-5xl text-[#be3519] uppercase tracking-wider"
+            className="font-display font-black text-2xl sm:text-4xl text-[#be3519] uppercase tracking-wider"
           >
             ABOUT US
           </motion.h2>
-          <span className="font-script text-xl sm:text-2xl text-[#522a25] font-bold hidden sm:inline">
+          <span className="font-script text-lg sm:text-xl text-[#522a25] font-bold hidden sm:inline">
             led by her, built for all
           </span>
         </div>

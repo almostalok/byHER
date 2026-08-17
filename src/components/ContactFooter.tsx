@@ -5,10 +5,10 @@ import { motion } from 'framer-motion';
 
 export default function ContactFooter() {
   return (
-    <footer id="contact" className="relative w-full bg-[#f49799] border-t-2 border-[#be3519] overflow-hidden">
+    <footer id="contact" className="relative w-[88vw] sm:w-[80vw] lg:w-[780px] xl:w-[880px] h-full flex-shrink-0 bg-[#f49799] flex flex-col justify-between pt-8 pb-3 px-6 sm:px-10 overflow-y-auto lg:overflow-visible select-none border-r-2 border-dashed border-[#be3519]/40">
       
       {/* Main Contact Links Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="w-full my-auto space-y-8">
         
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10">
           

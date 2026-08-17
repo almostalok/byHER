@@ -5,17 +5,35 @@ import { Menu, X, ExternalLink } from 'lucide-react';
 
 const READ_DOC_URL = 'https://docs.google.com/document/d/15-QOa-XTIeh0FHPbKWlyB_-RjzsE-NUJkjcHn3QO_qs/edit?usp=sharing';
 
-export default function Header() {
+interface HeaderProps {
+  onNavigate?: (sectionId: string) => void;
+}
+
+export default function Header({ onNavigate }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+    if (onNavigate) {
+      onNavigate(sectionId);
+    } else {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+      }
+    }
+  };
+
   return (
-    <header className="sticky top-0 z-50 bg-[#f49799]/95 backdrop-blur-md border-b border-[#be3519]/20 transition-all">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#f49799]/95 backdrop-blur-md border-b border-[#be3519]/20 transition-all h-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
         
         {/* Brand Logo / Signature with byHER Icon */}
         <a 
-          href="#" 
-          className="flex items-center gap-2.5 sm:gap-3 group"
+          href="#hero"
+          onClick={(e) => handleNavClick(e, 'hero')}
+          className="flex items-center gap-2.5 sm:gap-3 group cursor-pointer"
         >
           <img 
             src="/assets/byher_logo_chocolate.png" 
@@ -31,21 +49,32 @@ export default function Header() {
         <nav className="hidden md:flex items-center space-x-6 text-xs sm:text-sm font-bold tracking-[0.2em] text-[#be3519]">
           <a 
             href="#about" 
-            className="py-1 px-2 border-b-2 border-transparent hover:border-dashed hover:border-[#be3519] hover:text-[#522a25] transition-all uppercase"
+            onClick={(e) => handleNavClick(e, 'about')}
+            className="py-1 px-2 border-b-2 border-transparent hover:border-dashed hover:border-[#be3519] hover:text-[#522a25] transition-all uppercase cursor-pointer"
           >
             ABOUT US
           </a>
           <span className="text-[#be3519]/40">◆</span>
           <a 
             href="#projects" 
-            className="py-1 px-2 border-b-2 border-transparent hover:border-dashed hover:border-[#be3519] hover:text-[#522a25] transition-all uppercase"
+            onClick={(e) => handleNavClick(e, 'projects')}
+            className="py-1 px-2 border-b-2 border-transparent hover:border-dashed hover:border-[#be3519] hover:text-[#522a25] transition-all uppercase cursor-pointer"
           >
             PROJECTS
           </a>
           <span className="text-[#be3519]/40">◆</span>
           <a 
+            href="#community" 
+            onClick={(e) => handleNavClick(e, 'community')}
+            className="py-1 px-2 border-b-2 border-transparent hover:border-dashed hover:border-[#be3519] hover:text-[#522a25] transition-all uppercase cursor-pointer"
+          >
+            COMMUNITY
+          </a>
+          <span className="text-[#be3519]/40">◆</span>
+          <a 
             href="#contact" 
-            className="py-1 px-2 border-b-2 border-transparent hover:border-dashed hover:border-[#be3519] hover:text-[#522a25] transition-all uppercase"
+            onClick={(e) => handleNavClick(e, 'contact')}
+            className="py-1 px-2 border-b-2 border-transparent hover:border-dashed hover:border-[#be3519] hover:text-[#522a25] transition-all uppercase cursor-pointer"
           >
             CONTACT
           </a>
@@ -75,28 +104,28 @@ export default function Header() {
         <div className="md:hidden bg-[#f49799] border-b border-[#be3519]/30 px-6 py-6 space-y-4 text-center shadow-xl">
           <a 
             href="#about"
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={(e) => handleNavClick(e, 'about')}
             className="block text-lg font-bold text-[#be3519] hover:text-[#522a25] uppercase tracking-widest"
           >
             ABOUT US
           </a>
           <a 
             href="#projects"
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={(e) => handleNavClick(e, 'projects')}
             className="block text-lg font-bold text-[#be3519] hover:text-[#522a25] uppercase tracking-widest"
           >
             PROJECTS
           </a>
           <a 
             href="#community"
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={(e) => handleNavClick(e, 'community')}
             className="block text-lg font-bold text-[#be3519] hover:text-[#522a25] uppercase tracking-widest"
           >
             COMMUNITY
           </a>
           <a 
             href="#contact"
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={(e) => handleNavClick(e, 'contact')}
             className="block text-lg font-bold text-[#be3519] hover:text-[#522a25] uppercase tracking-widest"
           >
             CONTACT

@@ -14,7 +14,9 @@ body {
   background-color: #dfdac3;
   color: #522a25;
   font-family: var(--font-display), sans-serif;
-  overflow-x: hidden;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
 }
 
 /* Custom Typography Utility Classes */
@@ -38,30 +40,29 @@ body {
   font-family: var(--font-space), monospace;
 }
 
-/* Halftone Texture Overlay Effect */
-.halftone-dots {
-  background-image: radial-gradient(#be3519 20%, transparent 20%);
-  background-size: 8px 8px;
+/* Custom Scrollbar for Horizontal Track */
+.horizontal-scroll-container::-webkit-scrollbar {
+  height: 8px;
 }
-
-.halftone-dots-subtle {
-  background-image: radial-gradient(#be3519 15%, transparent 15%);
-  background-size: 6px 6px;
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-track {
+.horizontal-scroll-container::-webkit-scrollbar-track {
   background: #dfdac3;
+  border-top: 1px dashed #be3519;
 }
-::-webkit-scrollbar-thumb {
+.horizontal-scroll-container::-webkit-scrollbar-thumb {
   background: #be3519;
-  border-radius: 5px;
+  border-radius: 4px;
 }
-::-webkit-scrollbar-thumb:hover {
+.horizontal-scroll-container::-webkit-scrollbar-thumb:hover {
   background: #522a25;
+}
+
+/* Hide scrollbar when desired */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* Outline Text Effect for PORTFOLIO */

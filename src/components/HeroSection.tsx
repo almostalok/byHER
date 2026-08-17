@@ -18,7 +18,7 @@ export default function HeroSection() {
   const loopMembers = [...HERO_MEMBERS, ...HERO_MEMBERS];
 
   return (
-    <section className="relative w-full bg-[#f49799] overflow-hidden min-h-[calc(100vh-5rem)] lg:h-[calc(100vh-5rem)] flex flex-col justify-between pt-2 sm:pt-3 pb-0 select-none">
+    <section id="hero" className="relative w-screen min-w-[100vw] h-full flex-shrink-0 bg-[#f49799] overflow-hidden flex flex-col justify-between pt-2 sm:pt-3 pb-0 select-none border-r-2 border-dashed border-[#be3519]/40">
       
       {/* Top Retro Ledger Banner / Ticker Header */}
       <div className="w-full px-4 sm:px-8 z-20">

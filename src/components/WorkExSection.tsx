@@ -8,21 +8,21 @@ interface WorkExProps {
 
 export default function WorkExSection({ onSelectImage }: WorkExProps) {
   return (
-    <section id="projects" className="relative w-full bg-[#dfdac3] py-16 lg:py-24 border-b-2 border-[#be3519]/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section id="projects" className="relative w-[92vw] sm:w-[88vw] lg:w-[980px] xl:w-[1100px] h-full flex-shrink-0 bg-[#dfdac3] border-r-2 border-dashed border-[#be3519]/40 flex flex-col justify-center py-6 px-4 sm:px-8 lg:px-10 overflow-y-auto lg:overflow-visible select-none">
+      <div className="w-full space-y-6 lg:space-y-8 my-auto">
         
         {/* Section Header Bar */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b-2 border-dashed border-[#be3519] pb-4 gap-4">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b-2 border-dashed border-[#be3519] pb-3 gap-2">
           <motion.h2 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="font-display font-black text-3xl sm:text-5xl text-[#be3519] uppercase tracking-wider"
+            className="font-display font-black text-2xl sm:text-4xl text-[#be3519] uppercase tracking-wider"
           >
             FEATURED PROJECTS
           </motion.h2>
 
-          <div className="flex items-center space-x-4 sm:space-x-6 text-sm sm:text-base font-bold text-[#522a25] uppercase tracking-widest">
+          <div className="flex items-center space-x-3 text-xs sm:text-sm font-bold text-[#522a25] uppercase tracking-widest">
             <span>0 ➔ 1 HARDWARE & SOFTWARE</span>
             <span className="text-[#be3519]">|</span>
             <span>byHER LABS</span>
