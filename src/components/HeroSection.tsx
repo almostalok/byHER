@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Header from '@/components/Header';
 
 const HERO_MEMBERS = [
   { id: '1', name: 'Anshika', role: 'hardware & 0➔1', tilt: '-rotate-2', image: '/assets/hero_portrait_1.png' },
@@ -13,15 +14,22 @@ const HERO_MEMBERS = [
   { id: '8', name: 'Aditi', role: 'microcontrollers', tilt: 'rotate-3', image: '/assets/hero_portrait_3.png' },
 ];
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  onNavigate?: (sectionId: string) => void;
+}
+
+export default function HeroSection({ onNavigate }: HeroSectionProps) {
   // Seamless loop by duplicating the member list
   const loopMembers = [...HERO_MEMBERS, ...HERO_MEMBERS];
 
   return (
-    <section id="hero" className="relative w-screen min-w-[100vw] h-full flex-shrink-0 bg-[#f49799] overflow-hidden flex flex-col justify-between pt-2 sm:pt-3 pb-0 select-none border-r-2 border-dashed border-[#be3519]/40">
+    <section id="hero" className="relative w-screen min-w-[100vw] h-full flex-shrink-0 bg-[#f49799] overflow-hidden flex flex-col justify-between pt-0 pb-0 select-none border-r-2 border-dashed border-[#be3519]/40">
       
+      {/* Navigation Header stuck inside Hero Section */}
+      <Header onNavigate={onNavigate} />
+
       {/* Top Retro Ledger Banner / Ticker Header */}
-      <div className="w-full px-4 sm:px-8 z-20">
+      <div className="w-full px-4 sm:px-8 z-20 pt-2">
         <div className="relative flex items-center justify-between border-y-2 border-dashed border-[#be3519]/50 py-1.5 px-2 sm:px-4">
           <div className="flex items-center gap-2">
             <span className="inline-block w-2 h-2 rounded-full bg-[#be3519] animate-pulse" />

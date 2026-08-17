@@ -107,3 +107,5 @@ export default function WorkExSection({ onSelectImage }: WorkExProps) {
     </section>
   );
 }
+
+

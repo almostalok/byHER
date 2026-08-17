@@ -110,3 +110,5 @@ export default function NotesSkillPillsSection({ onSelectImage }: NotesProps) {
     </section>
   );
 }
+
+

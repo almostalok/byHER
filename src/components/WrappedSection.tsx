@@ -101,3 +101,5 @@ export default function WrappedSection({ onSelectImage }: WrappedProps) {
     </section>
   );
 }
+
+

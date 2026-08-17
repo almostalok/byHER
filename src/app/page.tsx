@@ -21,6 +21,8 @@ export default function Home() {
     title: '',
   });
 
+  const [activeSection, setActiveSection] = useState('hero');
+
   // Handle Wheel Event: translate vertical wheel (deltaY) into horizontal scroll (scrollLeft)
   useEffect(() => {
     const container = scrollContainerRef.current;
@@ -51,7 +53,7 @@ export default function Home() {
     };
   }, []);
 
-  // Update horizontal scroll progress
+  // Update horizontal scroll progress & active section
   const handleScroll = () => {
     const container = scrollContainerRef.current;
     if (!container) return;
@@ -60,6 +62,25 @@ export default function Home() {
       const current = Math.min(100, Math.max(0, (container.scrollLeft / maxScroll) * 100));
       setScrollProgress(current);
     }
+
+    const sectionIds = ['hero', 'about', 'projects', 'community', 'content-work', 'notes', 'contact'];
+    const viewportCenter = container.scrollLeft + container.clientWidth / 3; // biased slightly left for early transition
+    let closestSection = 'hero';
+    let minDistance = Infinity;
+
+    for (const id of sectionIds) {
+      const el = document.getElementById(id);
+      if (el) {
+        const elCenter = el.offsetLeft + el.offsetWidth / 3;
+        const distance = Math.abs(viewportCenter - elCenter);
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestSection = id;
+        }
+      }
+    }
+
+    setActiveSection(closestSection);
   };
 
   // Smooth Horizontal Navigation to Sections
@@ -102,11 +123,8 @@ export default function Home() {
   return (
     <div className="h-screen w-screen bg-[#dfdac3] flex flex-col overflow-hidden font-display selection:bg-[#be3519] selection:text-[#ebdcc4]">
       
-      {/* Fixed Navigation Header */}
-      <Header onNavigate={handleNavigate} />
-
       {/* Retro Horizontal Scroll Progress Bar */}
-      <div className="fixed top-20 left-0 right-0 z-40 h-1.5 bg-[#be3519]/20">
+      <div className="fixed top-0 left-0 right-0 z-40 h-1.5 bg-[#be3519]/20">
         <div 
           className="h-full bg-[#be3519] transition-all duration-150 ease-out"
           style={{ width: `${scrollProgress}%` }}
@@ -117,14 +135,14 @@ export default function Home() {
       <main
         ref={scrollContainerRef}
         onScroll={handleScroll}
-        className="horizontal-scroll-container flex-1 w-full h-[calc(100vh-5rem)] mt-20 flex flex-row flex-nowrap overflow-x-auto overflow-y-hidden select-none"
+        className="horizontal-scroll-container flex-1 w-full h-screen flex flex-row flex-nowrap overflow-x-auto overflow-y-hidden select-none"
         style={{
           scrollBehavior: 'smooth',
           WebkitOverflowScrolling: 'touch',
         }}
       >
-        {/* 1. Hero Section */}
-        <HeroSection />
+        {/* 1. Hero Section with Embedded Header */}
+        <HeroSection onNavigate={handleNavigate} />
 
         {/* 2. About Me Section */}
         <AboutSection />

@@ -26,7 +26,7 @@ export default function Header({ onNavigate }: HeaderProps) {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#f49799]/95 backdrop-blur-md border-b border-[#be3519]/20 transition-all h-20">
+    <header className="w-full bg-[#f49799] border-b border-[#be3519]/20 h-20 flex-shrink-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
         
         {/* Brand Logo / Signature with byHER Icon */}
@@ -101,7 +101,7 @@ export default function Header({ onNavigate }: HeaderProps) {
 
       {/* Mobile Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#f49799] border-b border-[#be3519]/30 px-6 py-6 space-y-4 text-center shadow-xl">
+        <div className="md:hidden bg-[#f49799] border-b border-[#be3519]/30 px-6 py-6 space-y-4 text-center shadow-xl relative z-50">
           <a 
             href="#about"
             onClick={(e) => handleNavClick(e, 'about')}
@@ -144,3 +144,5 @@ export default function Header({ onNavigate }: HeaderProps) {
     </header>
   );
 }
+
+
