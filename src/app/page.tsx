@@ -213,25 +213,25 @@ export default function Home() {
       </main>
 
       {/* Floating Retro Horizontal Navigation Controls & Shortcuts Trigger */}
-      <div className="fixed bottom-4 right-4 z-40 flex items-center gap-2 bg-[#dfdac3]/95 backdrop-blur-md border-2 border-dashed border-[#be3519] rounded-full p-1.5 shadow-xl">
+      <div className="fixed bottom-3 right-3 sm:bottom-4 sm:right-4 z-40 flex items-center gap-1 sm:gap-2 bg-[#dfdac3]/95 backdrop-blur-md border-2 border-dashed border-[#be3519] rounded-full p-1 sm:p-1.5 shadow-xl select-none">
         <button
           onClick={handleScrollPrev}
           disabled={scrollProgress <= 1}
-          className="flex items-center gap-1 bg-[#dfdac3] hover:bg-[#be3519] text-[#be3519] hover:text-[#ebdcc4] disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-[#be3519] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider transition-all cursor-pointer disabled:cursor-not-allowed"
+          className="flex items-center gap-1 bg-[#dfdac3] hover:bg-[#be3519] text-[#be3519] hover:text-[#ebdcc4] disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-[#be3519] px-2.5 sm:px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider transition-all cursor-pointer disabled:cursor-not-allowed"
           aria-label="Previous Section"
         >
           <ChevronLeft size={16} />
           <span className="hidden sm:inline">PREV</span>
         </button>
 
-        <span className="text-[11px] font-mono font-bold text-[#522a25] px-1">
+        <span className="text-[10px] sm:text-[11px] font-mono font-bold text-[#522a25] px-0.5 sm:px-1">
           {Math.round(scrollProgress)}%
         </span>
 
         <button
           onClick={handleScrollNext}
           disabled={scrollProgress >= 99}
-          className="flex items-center gap-1 bg-[#be3519] hover:bg-[#522a25] text-[#ebdcc4] disabled:opacity-30 disabled:hover:bg-[#be3519] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider transition-all cursor-pointer disabled:cursor-not-allowed shadow-sm"
+          className="flex items-center gap-1 bg-[#be3519] hover:bg-[#522a25] text-[#ebdcc4] disabled:opacity-30 disabled:hover:bg-[#be3519] px-2.5 sm:px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider transition-all cursor-pointer disabled:cursor-not-allowed shadow-sm"
           aria-label="Next Section"
         >
           <span className="hidden sm:inline">NEXT</span>
@@ -244,10 +244,10 @@ export default function Home() {
             playClick();
             setIsCheatsOpen(true);
           }}
-          className="bg-[#522a25] hover:bg-[#be3519] text-[#ebdcc4] p-1.5 rounded-full text-xs transition-colors cursor-pointer shadow-sm ml-1"
+          className="bg-[#522a25] hover:bg-[#be3519] text-[#ebdcc4] p-1 sm:p-1.5 rounded-full text-xs transition-colors cursor-pointer shadow-sm ml-0.5"
           title="Open Retro Keybindings Cheat Sheet [Key: ?]"
         >
-          <Gamepad2 size={16} />
+          <Gamepad2 size={15} />
         </button>
       </div>
 

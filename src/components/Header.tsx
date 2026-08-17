@@ -1,10 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Menu, X, ExternalLink, Volume2, VolumeX, Monitor, Gamepad2 } from 'lucide-react';
+import { Menu, X, Volume2, VolumeX, Monitor, Gamepad2 } from 'lucide-react';
 import { useRetroAudio } from '@/lib/useRetroAudio';
-
-const READ_DOC_URL = 'https://docs.google.com/document/d/15-QOa-XTIeh0FHPbKWlyB_-RjzsE-NUJkjcHn3QO_qs/edit?usp=sharing';
 
 interface HeaderProps {
   onNavigate?: (sectionId: string) => void;
@@ -32,21 +30,21 @@ export default function Header({ onNavigate, onToggleCrt, isCrtOn = false, onOpe
   };
 
   return (
-    <header className="w-full bg-[#f49799] border-b border-[#be3519]/20 h-20 flex-shrink-0 relative z-30 select-none">
+    <header className="w-full bg-[#f49799] border-b border-[#be3519]/20 h-16 sm:h-20 flex-shrink-0 relative z-30 select-none">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
         
         {/* Brand Logo / Signature with byHER Icon */}
         <a 
           href="#hero"
           onClick={(e) => handleNavClick(e, 'hero')}
-          className="flex items-center gap-2.5 sm:gap-3 group cursor-pointer"
+          className="flex items-center gap-2 sm:gap-3 group cursor-pointer"
         >
           <img 
             src="/assets/byher_logo_chocolate.png" 
             alt="byHER Logo Icon" 
-            className="h-8 sm:h-10 w-auto object-contain transform group-hover:rotate-6 group-hover:scale-110 transition-transform duration-300 drop-shadow-sm"
+            className="h-7 sm:h-10 w-auto object-contain transform group-hover:rotate-6 group-hover:scale-110 transition-transform duration-300 drop-shadow-sm"
           />
-          <span className="font-script text-4xl sm:text-5xl text-[#522a25] font-bold group-hover:text-[#be3519] transition-colors leading-none">
+          <span className="font-script text-3xl sm:text-5xl text-[#522a25] font-bold group-hover:text-[#be3519] transition-colors leading-none">
             byHER
           </span>
         </a>
@@ -147,7 +145,7 @@ export default function Header({ onNavigate, onToggleCrt, isCrtOn = false, onOpe
           className="md:hidden p-2 text-[#522a25] hover:text-[#be3519] focus:outline-none"
           aria-label="Toggle menu"
         >
-          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
       </div>
 
@@ -183,15 +181,15 @@ export default function Header({ onNavigate, onToggleCrt, isCrtOn = false, onOpe
             CONTACT
           </a>
           
-          <div className="flex items-center justify-center gap-3 pt-2">
+          <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
             <button
               onClick={() => {
                 playClick();
                 toggleMute();
               }}
-              className="bg-[#be3519] text-[#ebdcc4] px-4 py-2 rounded-full font-mono text-xs font-bold flex items-center gap-1.5"
+              className="bg-[#be3519] text-[#ebdcc4] px-3.5 py-1.5 rounded-full font-mono text-xs font-bold flex items-center gap-1.5"
             >
-              {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
+              {isMuted ? <VolumeX size={14} /> : <Volume2 size={14} />}
               <span>{isMuted ? 'SOUND OFF' : 'SOUND ON'}</span>
             </button>
 
@@ -201,10 +199,24 @@ export default function Header({ onNavigate, onToggleCrt, isCrtOn = false, onOpe
                   playClick();
                   onToggleCrt();
                 }}
-                className="bg-[#be3519] text-[#ebdcc4] px-4 py-2 rounded-full font-mono text-xs font-bold flex items-center gap-1.5"
+                className="bg-[#be3519] text-[#ebdcc4] px-3.5 py-1.5 rounded-full font-mono text-xs font-bold flex items-center gap-1.5"
               >
-                <Monitor size={16} />
+                <Monitor size={14} />
                 <span>{isCrtOn ? 'CRT ON' : 'CRT OFF'}</span>
+              </button>
+            )}
+
+            {onOpenCheats && (
+              <button
+                onClick={() => {
+                  playClick();
+                  setMobileMenuOpen(false);
+                  onOpenCheats();
+                }}
+                className="bg-[#522a25] text-[#ebdcc4] px-3.5 py-1.5 rounded-full font-mono text-xs font-bold flex items-center gap-1.5"
+              >
+                <Gamepad2 size={14} />
+                <span>CHEATS</span>
               </button>
             )}
           </div>

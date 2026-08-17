@@ -75,7 +75,7 @@ export default function WorkExSection({ onSelectImage }: WorkExProps) {
           </div>
 
           {/* Interactive Project Switcher Tabs */}
-          <div className="flex items-center gap-1.5 bg-[#dfdac3] border-2 border-dashed border-[#be3519] p-1 rounded-full text-xs font-bold">
+          <div className="flex items-center gap-1.5 bg-[#dfdac3] border-2 border-dashed border-[#be3519] p-1 rounded-full text-xs font-bold max-w-full overflow-x-auto no-scrollbar">
             <button
               onClick={() => {
                 playClick();

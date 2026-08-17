@@ -145,7 +145,7 @@ export default function ContactFooter() {
       </div>
 
       {/* Dark Bottom Bar */}
-      <div className="bg-[#0d1b2a] py-4 px-6 text-white text-xs font-semibold tracking-wider flex flex-col sm:flex-row items-center justify-between gap-4 rounded-t-2xl border-t-2 border-[#be3519]">
+      <div className="bg-[#0d1b2a] py-4 px-6 sm:pr-44 text-white text-xs font-semibold tracking-wider flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl border-2 border-[#be3519] mb-16 sm:mb-14 shadow-xl z-20">
         <div className="flex items-center space-x-6 font-mono text-[11px]">
           <a href="#" className="hover:text-[#f49799] transition-colors">Manifesto & Code of Conduct</a>
           <span>|</span>
