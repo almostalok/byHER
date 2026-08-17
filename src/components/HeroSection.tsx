@@ -23,7 +23,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
   const loopMembers = [...HERO_MEMBERS, ...HERO_MEMBERS];
 
   return (
-    <section id="hero" className="relative w-screen min-w-[100vw] h-full flex-shrink-0 bg-[#f49799] overflow-hidden flex flex-col justify-between pt-0 pb-0 select-none border-r-2 border-dashed border-[#be3519]/40">
+    <section id="hero" className="relative w-screen min-w-[100vw] h-full flex-shrink-0 snap-start snap-always bg-[#f49799] overflow-hidden flex flex-col justify-between pt-0 pb-0 select-none border-r-2 border-dashed border-[#be3519]/40">
       
       {/* Navigation Header stuck inside Hero Section */}
       <Header onNavigate={onNavigate} />

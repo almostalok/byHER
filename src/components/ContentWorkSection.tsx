@@ -7,8 +7,8 @@ const READ_DOC_URL = 'https://docs.google.com/document/d/15-QOa-XTIeh0FHPbKWlyB_
 
 export default function ContentWorkSection() {
   return (
-    <section id="content-work" className="relative w-[95vw] sm:w-[90vw] lg:w-[1100px] xl:w-[1200px] h-full flex-shrink-0 bg-[#dfdac3] border-r-2 border-dashed border-[#be3519]/40 flex flex-col justify-between pt-6 pb-2 px-4 sm:px-8 lg:px-10 overflow-y-auto lg:overflow-visible select-none">
-      <div className="w-full space-y-6 my-auto">
+    <section id="content-work" className="relative w-screen min-w-[100vw] h-full flex-shrink-0 snap-start snap-always bg-[#dfdac3] border-r-2 border-dashed border-[#be3519]/40 flex flex-col justify-between pt-6 pb-4 px-6 sm:px-12 lg:px-16 overflow-y-auto select-none">
+      <div className="max-w-7xl mx-auto w-full space-y-6 my-auto">
         
         {/* Top Grid: Bench Photo vs Read Manifesto Computer */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">

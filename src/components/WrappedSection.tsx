@@ -8,8 +8,8 @@ interface WrappedProps {
 
 export default function WrappedSection({ onSelectImage }: WrappedProps) {
   return (
-    <section id="community" className="relative w-[92vw] sm:w-[88vw] lg:w-[980px] xl:w-[1100px] h-full flex-shrink-0 bg-[#dfdac3] border-r-2 border-dashed border-[#be3519]/40 flex flex-col justify-center py-6 px-4 sm:px-8 lg:px-10 overflow-y-auto lg:overflow-visible select-none">
-      <div className="w-full space-y-6 lg:space-y-8 my-auto">
+    <section id="community" className="relative w-screen min-w-[100vw] h-full flex-shrink-0 snap-start snap-always bg-[#dfdac3] border-r-2 border-dashed border-[#be3519]/40 flex flex-col justify-center py-6 px-6 sm:px-12 lg:px-16 overflow-y-auto select-none">
+      <div className="max-w-7xl mx-auto w-full space-y-6 lg:space-y-8 my-auto">
         
         {/* Layout Grid: Left Header & Megaphone vs Right Tilted Wrapped Collage */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">

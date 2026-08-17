@@ -131,11 +131,11 @@ export default function Home() {
         />
       </div>
 
-      {/* Main Horizontal Scrolling Viewport */}
+      {/* Main Horizontal Scrolling Viewport with Fullscreen Snap */}
       <main
         ref={scrollContainerRef}
         onScroll={handleScroll}
-        className="horizontal-scroll-container flex-1 w-full h-screen flex flex-row flex-nowrap overflow-x-auto overflow-y-hidden select-none"
+        className="horizontal-scroll-container flex-1 w-full h-screen flex flex-row flex-nowrap overflow-x-auto overflow-y-hidden select-none snap-x snap-mandatory"
         style={{
           scrollBehavior: 'smooth',
           WebkitOverflowScrolling: 'touch',
