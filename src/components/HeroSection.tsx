@@ -3,14 +3,14 @@
 import { motion } from 'framer-motion';
 
 const HERO_MEMBERS = [
-  { id: '1', name: 'Anshika', role: 'hardware & 0➔1', tilt: '-rotate-2' },
-  { id: '2', name: 'Maya', role: 'embedded & IoT', tilt: 'rotate-3' },
-  { id: '3', name: 'Rhea', role: 'fullstack & systems', tilt: '-rotate-1' },
-  { id: '4', name: 'Tara', role: 'robotics & AI', tilt: 'rotate-2' },
-  { id: '5', name: 'Pooja', role: 'PCB & circuits', tilt: '-rotate-3' },
-  { id: '6', name: 'Elena', role: 'rapid prototyping', tilt: 'rotate-1' },
-  { id: '7', name: 'Kavya', role: 'sensors & telemetry', tilt: '-rotate-2' },
-  { id: '8', name: 'Aditi', role: 'microcontrollers', tilt: 'rotate-3' },
+  { id: '1', name: 'Anshika', role: 'hardware & 0➔1', tilt: '-rotate-2', image: '/assets/hero_portrait_1.png' },
+  { id: '2', name: 'Maya', role: 'embedded & IoT', tilt: 'rotate-3', image: '/assets/hero_portrait_2.png' },
+  { id: '3', name: 'Rhea', role: 'fullstack & systems', tilt: '-rotate-1', image: '/assets/hero_portrait_3.png' },
+  { id: '4', name: 'Tara', role: 'robotics & AI', tilt: 'rotate-2', image: '/assets/hero_portrait_4.png' },
+  { id: '5', name: 'Pooja', role: 'PCB & circuits', tilt: '-rotate-3', image: '/assets/hero_portrait_5.png' },
+  { id: '6', name: 'Elena', role: 'rapid prototyping', tilt: 'rotate-1', image: '/assets/hero_portrait_1.png' },
+  { id: '7', name: 'Kavya', role: 'sensors & telemetry', tilt: '-rotate-2', image: '/assets/hero_portrait_2.png' },
+  { id: '8', name: 'Aditi', role: 'microcontrollers', tilt: 'rotate-3', image: '/assets/hero_portrait_3.png' },
 ];
 
 export default function HeroSection() {
@@ -180,7 +180,7 @@ export default function HeroSection() {
               {/* Cutout Portrait with White Shadow / Outline */}
               <div className="relative w-[120px] sm:w-[160px] lg:w-[180px] h-[140px] sm:h-[185px] lg:h-[210px] flex items-end justify-center">
                 <img
-                  src="/assets/hero_portrait.png"
+                  src={member.image}
                   alt={`${member.name} - byHER Maker`}
                   className="w-full h-full object-contain object-bottom sticker-white-cutout select-none"
                   draggable={false}
