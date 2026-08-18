@@ -58,6 +58,18 @@ export default function Home() {
       return;
     }
 
+    // Allow internal vertical scrolling inside scrollable containers if not at boundary
+    const scrollable = target?.closest('.overflow-y-auto') as HTMLElement | null;
+    if (scrollable && scrollable.scrollHeight > scrollable.clientHeight + 10) {
+      const isDown = e.deltaY > 0;
+      const isUp = e.deltaY < 0;
+      const atBottom = Math.ceil(scrollable.scrollTop + scrollable.clientHeight) >= scrollable.scrollHeight - 5;
+      const atTop = scrollable.scrollTop <= 5;
+      if ((isDown && !atBottom) || (isUp && !atTop)) {
+        return;
+      }
+    }
+
     if (isTransitioningRef.current) return;
 
     const delta = Math.abs(e.deltaY) > Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
@@ -89,6 +101,18 @@ export default function Home() {
         return;
       }
 
+      // Allow internal vertical scrolling inside section if not at boundary
+      const scrollable = target?.closest('.overflow-y-auto') as HTMLElement | null;
+      if (scrollable && scrollable.scrollHeight > scrollable.clientHeight + 10) {
+        const isDown = e.deltaY > 0;
+        const isUp = e.deltaY < 0;
+        const atBottom = Math.ceil(scrollable.scrollTop + scrollable.clientHeight) >= scrollable.scrollHeight - 5;
+        const atTop = scrollable.scrollTop <= 5;
+        if ((isDown && !atBottom) || (isUp && !atTop)) {
+          return;
+        }
+      }
+
       const delta = Math.abs(e.deltaY) > Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
 
       if (Math.abs(delta) > 15) {
@@ -112,7 +136,7 @@ export default function Home() {
       }
     };
 
-    // 2. Touch Swipes: Any swipe movement advances by 1 section
+    // 2. Touch Swipes: Any swipe movement advances by 1 section or scrolls inside
     let touchStartY = 0;
     let touchStartX = 0;
 
@@ -134,13 +158,34 @@ export default function Home() {
         const touchEndX = e.changedTouches[0].clientX;
         const deltaY = touchStartY - touchEndY;
         const deltaX = touchStartX - touchEndX;
-        const primaryDelta = Math.abs(deltaY) > Math.abs(deltaX) ? deltaY : deltaX;
 
-        if (primaryDelta > 35) {
-          // Swipe up / left -> next section
+        // If horizontal swipe, immediately slide sections
+        if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 30) {
+          if (deltaX > 30) {
+            scrollToSectionIndex(activeIdxRef.current + 1);
+          } else {
+            scrollToSectionIndex(activeIdxRef.current - 1);
+          }
+          return;
+        }
+
+        // If vertical swipe, check boundary
+        const scrollable = target?.closest('.overflow-y-auto') as HTMLElement | null;
+        if (scrollable && scrollable.scrollHeight > scrollable.clientHeight + 10) {
+          const isDown = deltaY > 0;
+          const isUp = deltaY < 0;
+          const atBottom = Math.ceil(scrollable.scrollTop + scrollable.clientHeight) >= scrollable.scrollHeight - 5;
+          const atTop = scrollable.scrollTop <= 5;
+          if ((isDown && !atBottom) || (isUp && !atTop)) {
+            return;
+          }
+        }
+
+        if (deltaY > 35) {
+          // Swipe up -> next section
           scrollToSectionIndex(activeIdxRef.current + 1);
-        } else if (primaryDelta < -35) {
-          // Swipe down / right -> prev section
+        } else if (deltaY < -35) {
+          // Swipe down -> prev section
           scrollToSectionIndex(activeIdxRef.current - 1);
         }
       }

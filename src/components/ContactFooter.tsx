@@ -27,11 +27,11 @@ export default function ContactFooter() {
   };
 
   return (
-    <footer id="contact" className="relative w-screen min-w-[100vw] h-full flex-shrink-0 snap-start snap-always bg-[#f49799] flex flex-col justify-between pt-8 pb-3 px-4 sm:px-8 lg:px-16 overflow-y-auto select-none border-r-2 border-dashed border-[#be3519]/40">
+    <footer id="contact" className="relative w-screen min-w-[100vw] h-full flex-shrink-0 snap-start snap-always bg-[#f49799] flex flex-col justify-start md:justify-between pt-6 pb-2 px-4 sm:px-8 lg:px-16 overflow-y-auto select-none border-r-2 border-dashed border-[#be3519]/40">
       
       {/* Top Teletype Section Header */}
-      <div className="max-w-7xl mx-auto w-full pt-2">
-        <div className="flex items-center justify-between border-b-2 border-dashed border-[#be3519]/40 pb-3">
+      <div className="max-w-7xl mx-auto w-full pt-1 sm:pt-2">
+        <div className="flex items-center justify-between border-b-2 border-dashed border-[#be3519]/40 pb-2 sm:pb-3">
           <div className="flex items-center gap-2">
             <span className="bg-[#be3519] text-[#ebdcc4] font-display font-black text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full uppercase tracking-widest shadow-sm flex items-center gap-1.5">
               <Send size={12} /> 06 / TELEGRAM & POSTAL
@@ -44,20 +44,20 @@ export default function ContactFooter() {
           {/* Back to Top Rocket Button */}
           <button
             onClick={handleScrollTop}
-            className="bg-[#dfdac3] text-[#be3519] border-2 border-[#be3519] hover:bg-[#be3519] hover:text-[#ebdcc4] px-3 sm:px-3.5 py-1 rounded-full font-mono text-xs font-bold uppercase tracking-wider transition-colors flex items-center gap-1 cursor-pointer shadow-sm"
+            className="bg-[#dfdac3] text-[#be3519] border-2 border-[#be3519] hover:bg-[#be3519] hover:text-[#ebdcc4] px-2.5 sm:px-3.5 py-0.5 sm:py-1 rounded-full font-mono text-xs font-bold uppercase tracking-wider transition-colors flex items-center gap-1 cursor-pointer shadow-sm"
           >
-            TOP <ArrowUp size={14} />
+            TOP <ArrowUp size={13} />
           </button>
         </div>
       </div>
 
       {/* Main Contact Links Container */}
-      <div className="max-w-7xl mx-auto w-full my-auto space-y-8 py-6">
+      <div className="max-w-7xl mx-auto w-full my-3 md:my-auto space-y-4 sm:space-y-8 py-2 sm:py-6">
         
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-12 relative z-10">
           
           {/* Social Links List */}
-          <div className="space-y-5 sm:space-y-6 text-left w-full lg:w-auto">
+          <div className="space-y-3 sm:space-y-6 text-left w-full lg:w-auto">
             
             {/* Instagram Link */}
             <motion.a 
@@ -68,14 +68,14 @@ export default function ContactFooter() {
               rel="noopener noreferrer"
               className="flex items-center space-x-3 sm:space-x-4 group cursor-pointer"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-2xl bg-[#522a25] group-hover:bg-[#be3519] transition-colors p-2 shadow-lg shrink-0">
+              <div className="w-9 h-9 sm:w-12 sm:h-12 flex items-center justify-center rounded-2xl bg-[#522a25] group-hover:bg-[#be3519] transition-colors p-2 shadow-lg shrink-0">
                 <img 
                   src="/assets/icon_insta.png" 
                   alt="Instagram" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="font-script text-2xl sm:text-4xl text-[#522a25] group-hover:text-[#be3519] font-bold underline underline-offset-4 transition-colors">
+              <span className="font-script text-xl sm:text-4xl text-[#522a25] group-hover:text-[#be3519] font-bold underline underline-offset-4 transition-colors">
                 @byher.build
               </span>
             </motion.a>
@@ -89,14 +89,14 @@ export default function ContactFooter() {
               rel="noopener noreferrer"
               className="flex items-center space-x-3 sm:space-x-4 group cursor-pointer"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-2xl bg-[#522a25] group-hover:bg-[#be3519] transition-colors p-2 shadow-lg shrink-0">
+              <div className="w-9 h-9 sm:w-12 sm:h-12 flex items-center justify-center rounded-2xl bg-[#522a25] group-hover:bg-[#be3519] transition-colors p-2 shadow-lg shrink-0">
                 <img 
                   src="/assets/icon_linkedin.png" 
                   alt="LinkedIn" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="font-script text-2xl sm:text-4xl text-[#522a25] group-hover:text-[#be3519] font-bold underline underline-offset-4 transition-colors">
+              <span className="font-script text-xl sm:text-4xl text-[#522a25] group-hover:text-[#be3519] font-bold underline underline-offset-4 transition-colors">
                 byHER Collective
               </span>
             </motion.a>
@@ -108,10 +108,10 @@ export default function ContactFooter() {
               href="mailto:hello@byher.org" 
               className="flex items-center space-x-3 sm:space-x-4 group cursor-pointer"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-2xl bg-[#522a25] text-[#ebdcc4] group-hover:bg-[#be3519] transition-colors p-2 shadow-lg shrink-0">
-                <Mail size={22} />
+              <div className="w-9 h-9 sm:w-12 sm:h-12 flex items-center justify-center rounded-2xl bg-[#522a25] text-[#ebdcc4] group-hover:bg-[#be3519] transition-colors p-2 shadow-lg shrink-0">
+                <Mail size={18} />
               </div>
-              <span className="font-script text-xl sm:text-3xl text-[#522a25] group-hover:text-[#be3519] font-bold underline underline-offset-4 transition-colors break-all sm:break-normal">
+              <span className="font-script text-lg sm:text-3xl text-[#522a25] group-hover:text-[#be3519] font-bold underline underline-offset-4 transition-colors break-all sm:break-normal">
                 hello@byher.org
               </span>
             </motion.a>
@@ -119,12 +119,12 @@ export default function ContactFooter() {
           </div>
 
           {/* Right Side: Mascot and Tagline badge */}
-          <div className="flex flex-col items-center space-y-3 sm:space-y-4">
+          <div className="flex flex-col items-center space-y-2 sm:space-y-4">
             <motion.div 
               onClick={handleDuckClick}
               animate={{ y: [-6, 6, -6], rotate: [-4, 4, -4] }}
               transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
-              className="w-28 h-28 sm:w-44 sm:h-44 drop-shadow-2xl cursor-pointer group"
+              className="w-20 h-20 sm:w-44 sm:h-44 drop-shadow-2xl cursor-pointer group"
             >
               <img 
                 src="/assets/mascot_duck.png" 
@@ -133,8 +133,8 @@ export default function ContactFooter() {
               />
             </motion.div>
 
-            <div className="bg-[#dfdac3] border-2 border-dashed border-[#be3519] rounded-full px-5 sm:px-6 py-1.5 sm:py-2 shadow-md">
-              <p className="font-script text-lg sm:text-xl text-[#be3519] font-bold">
+            <div className="bg-[#dfdac3] border-2 border-dashed border-[#be3519] rounded-full px-4 sm:px-6 py-1 sm:py-2 shadow-md">
+              <p className="font-script text-base sm:text-xl text-[#be3519] font-bold">
                 led by her, built for all.
               </p>
             </div>
@@ -145,17 +145,17 @@ export default function ContactFooter() {
       </div>
 
       {/* Dark Bottom Bar */}
-      <div className="bg-[#0d1b2a] py-3.5 px-4 sm:px-6 sm:pr-44 text-white text-xs font-semibold tracking-wider flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 rounded-2xl border-2 border-[#be3519] mb-12 sm:mb-14 shadow-xl z-20">
-        <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:space-x-6 font-mono text-[10px] sm:text-[11px]">
+      <div className="bg-[#0d1b2a] py-2.5 sm:py-3.5 px-3 sm:px-6 sm:pr-44 text-white text-xs font-semibold tracking-wider flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4 rounded-2xl border-2 border-[#be3519] mb-16 sm:mb-14 shadow-xl z-20">
+        <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:space-x-6 font-mono text-[9px] sm:text-[11px]">
           <a href="#" className="hover:text-[#f49799] transition-colors">Manifesto & Code of Conduct</a>
           <span>|</span>
           <a href="#" className="hover:text-[#f49799] transition-colors">Privacy Policy</a>
         </div>
-        <div className="flex items-center space-x-2 text-gray-400 font-mono text-[10px] sm:text-[11px]">
+        <div className="flex items-center space-x-2 text-gray-400 font-mono text-[9px] sm:text-[11px]">
           <img 
             src="/assets/byher_logo_cream.png" 
             alt="byHER icon" 
-            className="h-4 sm:h-5 w-auto object-contain opacity-90"
+            className="h-3.5 sm:h-5 w-auto object-contain opacity-90"
           />
           <span>Built with pride by <span className="text-[#f49799] font-bold">byHER</span></span>
         </div>
