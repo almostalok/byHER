@@ -6,14 +6,13 @@ import { useRetroAudio } from '@/lib/useRetroAudio';
 import confetti from 'canvas-confetti';
 
 const HERO_MEMBERS = [
-  { id: '1', name: 'Anshika', role: 'hardware & 0➔1', tilt: '-rotate-2', image: '/assets/hero_portrait_1.png' },
-  { id: '2', name: 'Maya', role: 'embedded & IoT', tilt: 'rotate-3', image: '/assets/hero_portrait_2.png' },
-  { id: '3', name: 'Rhea', role: 'fullstack & systems', tilt: '-rotate-1', image: '/assets/hero_portrait_3.png' },
-  { id: '4', name: 'Tara', role: 'robotics & AI', tilt: 'rotate-2', image: '/assets/hero_portrait_4.png' },
-  { id: '5', name: 'Pooja', role: 'PCB & circuits', tilt: '-rotate-3', image: '/assets/hero_portrait_5.png' },
-  { id: '6', name: 'Elena', role: 'rapid prototyping', tilt: 'rotate-1', image: '/assets/hero_portrait_6.png' },
-  { id: '7', name: 'Kavya', role: 'sensors & telemetry', tilt: '-rotate-2', image: '/assets/hero_portrait_7.png' },
-  { id: '8', name: 'Aditi', role: 'microcontrollers', tilt: 'rotate-3', image: '/assets/hero_portrait_3.png' },
+  { id: '1', name: 'Parul', tilt: '-rotate-2', image: '/assets/hero_portrait_1.png' },
+  { id: '2', name: 'Kritika', tilt: 'rotate-3', image: '/assets/hero_portrait_2.png' },
+  { id: '3', name: 'Prachi', tilt: '-rotate-1', image: '/assets/hero_portrait_3.png' },
+  { id: '4', name: 'Anu', tilt: 'rotate-2', image: '/assets/hero_portrait_4.png' },
+  { id: '5', name: 'Nidhi', tilt: '-rotate-3', image: '/assets/hero_portrait_5.png' },
+  { id: '6', name: 'Madhuri', tilt: 'rotate-1', image: '/assets/hero_portrait_6.png' },
+  { id: '7', name: 'Nikita', tilt: '-rotate-2', image: '/assets/hero_portrait_7.png' },
 ];
 
 interface HeroSectionProps {
@@ -215,9 +214,9 @@ export default function HeroSection({ onNavigate, onToggleCrt, isCrtOn, onOpenCh
               </div>
 
               {/* Scrapbook Tape Tag Label */}
-              <div className="mt-1 bg-[#dfdac3] border border-dashed border-[#be3519] px-2 sm:px-3 py-0.5 shadow-sm transform -rotate-1 group-hover:rotate-0 transition-transform">
+              <div className="mt-1 bg-[#dfdac3] border border-dashed border-[#be3519] px-2.5 sm:px-3.5 py-0.5 shadow-sm transform -rotate-1 group-hover:rotate-0 transition-transform">
                 <span className="font-script text-xs sm:text-base lg:text-lg text-[#be3519] font-bold whitespace-nowrap">
-                  {member.name} • {member.role}
+                  {member.name}
                 </span>
               </div>
             </div>
