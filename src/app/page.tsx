@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import WorkExSection from '@/components/WorkExSection';
@@ -11,16 +11,18 @@ import ContactFooter from '@/components/ContactFooter';
 import ImageModal from '@/components/ImageModal';
 import CrtScanlineOverlay from '@/components/CrtScanlineOverlay';
 import KeyboardShortcutsModal from '@/components/KeyboardShortcutsModal';
-import { ChevronLeft, ChevronRight, Gamepad2, Monitor, Volume2, VolumeX } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Gamepad2 } from 'lucide-react';
 import { useRetroAudio } from '@/lib/useRetroAudio';
 import confetti from 'canvas-confetti';
+
+const SECTION_IDS = ['hero', 'about', 'projects', 'community', 'content-work', 'notes', 'contact'];
 
 export default function Home() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isCrtOn, setIsCrtOn] = useState(false);
   const [isCheatsOpen, setIsCheatsOpen] = useState(false);
-  const { isMuted, toggleMute, playClick, playQuack } = useRetroAudio();
+  const { toggleMute, playClick, playQuack } = useRetroAudio();
 
   const [modalState, setModalState] = useState({
     isOpen: false,
@@ -28,41 +30,64 @@ export default function Home() {
     title: '',
   });
 
-  const [activeSection, setActiveSection] = useState('hero');
-
-  // Handle Wheel Event: translate vertical wheel (deltaY) into horizontal scroll (scrollLeft)
+  // Zero-Delay Direct Vertical-to-Horizontal Wheel & Touch Mapping
   useEffect(() => {
     const container = scrollContainerRef.current;
     if (!container) return;
 
+    // 1. Mouse wheel / Trackpad: Instant 0ms 1:1 translation of vertical wheel delta to horizontal scroll
     const handleWheel = (e: WheelEvent) => {
-      // Do NOT intercept vertical wheel scrolling if user is scrolling inside a modal or scrollable popup
+      // ONLY skip if user is scrolling inside an open modal popup (e.g. Handbook doc or Project spec modal)
       const target = e.target as HTMLElement | null;
-      if (target && target.closest('.overflow-y-auto, .overflow-y-scroll, [role="dialog"], .modal-scroll-area')) {
+      if (target && target.closest('[role="dialog"], .modal-scroll-area')) {
         return;
       }
 
+      // If user is scrolling vertically, translate directly to horizontal scroll with ZERO latency
       if (Math.abs(e.deltaY) > Math.abs(e.deltaX) && !e.shiftKey) {
         e.preventDefault();
-        container.scrollLeft += e.deltaY * 1.3;
+        container.scrollLeft += e.deltaY;
       }
     };
 
-    const sectionIds = ['hero', 'about', 'projects', 'community', 'content-work', 'notes', 'contact'];
+    // 2. Touch Swipes: Direct 1:1 finger tracking with zero lag
+    let touchStartY = 0;
 
+    const handleTouchStart = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        touchStartY = e.touches[0].clientY;
+      }
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (target && target.closest('[role="dialog"], .modal-scroll-area')) {
+        return;
+      }
+
+      if (e.touches.length > 0) {
+        const currentY = e.touches[0].clientY;
+        const deltaY = touchStartY - currentY;
+        
+        container.scrollLeft += deltaY * 1.3;
+        touchStartY = currentY;
+      }
+    };
+
+    // 3. Keyboard Navigation
     const handleKeyDown = (e: KeyboardEvent) => {
       const activeEl = document.activeElement;
       if (activeEl && (activeEl.tagName === 'INPUT' || activeEl.tagName === 'TEXTAREA')) {
-        return; // Ignore keybindings when user is typing in forms
+        return;
       }
 
-      if (e.key === 'ArrowRight') {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === 'PageDown') {
         container.scrollBy({ left: 450, behavior: 'smooth' });
-      } else if (e.key === 'ArrowLeft') {
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp' || e.key === 'PageUp') {
         container.scrollBy({ left: -450, behavior: 'smooth' });
       } else if (e.key >= '1' && e.key <= '7') {
         const idx = parseInt(e.key) - 1;
-        const targetId = sectionIds[idx];
+        const targetId = SECTION_IDS[idx];
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
           container.scrollTo({ left: targetElement.offsetLeft, behavior: 'smooth' });
@@ -82,43 +107,29 @@ export default function Home() {
       }
     };
 
-    container.addEventListener('wheel', handleWheel, { passive: false });
+    window.addEventListener('wheel', handleWheel, { passive: false });
+    window.addEventListener('touchstart', handleTouchStart, { passive: true });
+    window.addEventListener('touchmove', handleTouchMove, { passive: true });
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
-      container.removeEventListener('wheel', handleWheel);
+      window.removeEventListener('wheel', handleWheel);
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchmove', handleTouchMove);
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [playClick, playQuack, toggleMute]);
 
-  // Update horizontal scroll progress & active section
+  // Update horizontal scroll progress
   const handleScroll = () => {
     const container = scrollContainerRef.current;
     if (!container) return;
+
     const maxScroll = container.scrollWidth - container.clientWidth;
     if (maxScroll > 0) {
       const current = Math.min(100, Math.max(0, (container.scrollLeft / maxScroll) * 100));
       setScrollProgress(current);
     }
-
-    const sectionIds = ['hero', 'about', 'projects', 'community', 'content-work', 'notes', 'contact'];
-    const viewportCenter = container.scrollLeft + container.clientWidth / 3;
-    let closestSection = 'hero';
-    let minDistance = Infinity;
-
-    for (const id of sectionIds) {
-      const el = document.getElementById(id);
-      if (el) {
-        const elCenter = el.offsetLeft + el.offsetWidth / 3;
-        const distance = Math.abs(viewportCenter - elCenter);
-        if (distance < minDistance) {
-          minDistance = distance;
-          closestSection = id;
-        }
-      }
-    }
-
-    setActiveSection(closestSection);
   };
 
   // Smooth Horizontal Navigation to Sections
@@ -127,25 +138,22 @@ export default function Home() {
     if (!container) return;
     const targetElement = document.getElementById(sectionId);
     if (targetElement) {
-      const targetOffset = targetElement.offsetLeft;
-      container.scrollTo({ left: targetOffset, behavior: 'smooth' });
+      container.scrollTo({ left: targetElement.offsetLeft, behavior: 'smooth' });
     }
   };
 
   const handleScrollPrev = () => {
     playClick();
     const container = scrollContainerRef.current;
-    if (container) {
-      container.scrollBy({ left: -Math.min(window.innerWidth * 0.8, 800), behavior: 'smooth' });
-    }
+    if (!container) return;
+    container.scrollBy({ left: -Math.min(window.innerWidth * 0.85, 800), behavior: 'smooth' });
   };
 
   const handleScrollNext = () => {
     playClick();
     const container = scrollContainerRef.current;
-    if (container) {
-      container.scrollBy({ left: Math.min(window.innerWidth * 0.8, 800), behavior: 'smooth' });
-    }
+    if (!container) return;
+    container.scrollBy({ left: Math.min(window.innerWidth * 0.85, 800), behavior: 'smooth' });
   };
 
   const handleSelectImage = (imgUrl: string, title: string) => {
@@ -175,13 +183,12 @@ export default function Home() {
         />
       </div>
 
-      {/* Main Horizontal Scrolling Viewport */}
+      {/* Main Viewport: Instant Direct Horizontal Scrolling */}
       <main
         ref={scrollContainerRef}
         onScroll={handleScroll}
-        className="horizontal-scroll-container flex-1 w-full h-screen flex flex-row flex-nowrap overflow-x-auto overflow-y-hidden select-none snap-x snap-mandatory"
+        className="horizontal-scroll-container flex-1 w-full h-full flex flex-row flex-nowrap overflow-x-auto overflow-y-hidden select-none snap-x snap-proximity"
         style={{
-          scrollBehavior: 'smooth',
           WebkitOverflowScrolling: 'touch',
         }}
       >
@@ -212,7 +219,7 @@ export default function Home() {
         <ContactFooter />
       </main>
 
-      {/* Floating Retro Horizontal Navigation Controls & Shortcuts Trigger */}
+      {/* Floating Retro Navigation Controls */}
       <div className="fixed bottom-3 right-3 sm:bottom-4 sm:right-4 z-40 flex items-center gap-1 sm:gap-2 bg-[#dfdac3]/95 backdrop-blur-md border-2 border-dashed border-[#be3519] rounded-full p-1 sm:p-1.5 shadow-xl select-none">
         <button
           onClick={handleScrollPrev}

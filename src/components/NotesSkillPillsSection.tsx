@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, Pin, Plus, CheckCircle, ExternalLink, Lightbulb, Palette, Cpu } from 'lucide-react';
+import { Pin, Plus, ExternalLink, Palette } from 'lucide-react';
 
 interface NotesProps {
   onSelectImage?: (imgUrl: string, title: string) => void;
@@ -86,34 +86,34 @@ export default function NotesSkillPillsSection({ onSelectImage }: NotesProps) {
   };
 
   return (
-    <section id="notes" className="relative w-screen min-w-[100vw] h-full flex-shrink-0 snap-start snap-always bg-[#dfdac3] border-r-2 border-dashed border-[#be3519]/40 flex flex-col justify-between py-6 px-6 sm:px-12 lg:px-16 overflow-y-auto select-none">
+    <section id="notes" className="relative w-screen min-w-[100vw] h-full flex-shrink-0 snap-start snap-always bg-[#dfdac3] border-r-2 border-dashed border-[#be3519]/40 flex flex-col justify-between py-6 px-4 sm:px-8 lg:px-16 overflow-y-auto select-none">
       <div className="max-w-7xl mx-auto w-full space-y-6 my-auto">
         
         {/* Header Bar */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b-2 border-dashed border-[#be3519] pb-3 gap-2">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <motion.h2 
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="font-display font-black text-2xl sm:text-4xl text-[#be3519] uppercase tracking-wider"
             >
-              THE CREATIVE LAB & WHITEBOARD
+              THE CREATIVE LAB
             </motion.h2>
-            <span className="bg-[#be3519] text-[#ebdcc4] text-[10px] sm:text-xs font-display font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-              RANDOM IDEAS & DESIGNER STUFF
+            <span className="bg-[#be3519] text-[#ebdcc4] text-[9px] sm:text-xs font-display font-bold px-2.5 sm:px-3 py-1 rounded-full uppercase tracking-wider">
+              WHITEBOARD & IDEAS
             </span>
           </div>
 
           <div className="flex items-center space-x-3 text-xs sm:text-sm font-bold text-[#522a25] uppercase tracking-widest">
-            <span className="font-script text-lg text-[#be3519] font-bold">3am Brainstorms</span>
+            <span className="font-script text-base sm:text-lg text-[#be3519] font-bold">3am Brainstorms</span>
             <span className="text-[#be3519]">|</span>
             <span className="font-mono text-xs">byHER STUDIO</span>
           </div>
         </div>
 
-        {/* Content Layout: Left Whiteboard Canvas vs Right Interactive Post-Its & Pills */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        {/* Content Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
           
           {/* Left Column: Generated Whiteboard Photo Canvas (Cols 1-7) */}
           <motion.div 
@@ -124,17 +124,17 @@ export default function NotesSkillPillsSection({ onSelectImage }: NotesProps) {
             className="lg:col-span-7 relative group rounded-3xl overflow-hidden shadow-2xl border-4 border-[#be3519] bg-[#1a1a1a] flex flex-col justify-between"
           >
             {/* Corner Decorative Pushpins */}
-            <div className="absolute top-3 left-3 z-20 w-7 h-7 drop-shadow-md pointer-events-none">
+            <div className="absolute top-3 left-3 z-20 w-6 h-6 sm:w-7 sm:h-7 drop-shadow-md pointer-events-none">
               <img src="/assets/pushpin_graphic.png" alt="Pushpin" className="w-full h-full object-contain" />
             </div>
-            <div className="absolute top-3 right-3 z-20 w-7 h-7 drop-shadow-md pointer-events-none transform rotate-45">
+            <div className="absolute top-3 right-3 z-20 w-6 h-6 sm:w-7 sm:h-7 drop-shadow-md pointer-events-none transform rotate-45">
               <img src="/assets/pushpin_graphic.png" alt="Pushpin" className="w-full h-full object-contain" />
             </div>
 
             {/* Clickable Whiteboard Graphic Container */}
             <div 
               onClick={() => onSelectImage?.('/assets/whiteboard_designer_lab.png', 'byHER Creative Whiteboard & Schematics')}
-              className="cursor-pointer overflow-hidden relative flex-1 min-h-[260px] flex items-center justify-center bg-[#dfdac3]"
+              className="cursor-pointer overflow-hidden relative flex-1 min-h-[220px] sm:min-h-[260px] flex items-center justify-center bg-[#dfdac3]"
             >
               <img 
                 src="/assets/whiteboard_designer_lab.png" 
@@ -145,14 +145,14 @@ export default function NotesSkillPillsSection({ onSelectImage }: NotesProps) {
               {/* Hover Overlay */}
               <div className="absolute inset-0 bg-[#522a25]/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <span className="bg-[#be3519] text-[#ebdcc4] font-display font-bold text-xs uppercase tracking-widest px-5 py-2.5 rounded-full shadow-lg flex items-center gap-1.5">
-                  Click to Expand Whiteboard & Doodles <ExternalLink size={14} />
+                  Click to Expand Whiteboard <ExternalLink size={14} />
                 </span>
               </div>
             </div>
 
             {/* Bottom Whiteboard Label */}
-            <div className="bg-[#be3519] py-2.5 px-6 text-center border-t-2 border-[#522a25]">
-              <p className="font-display font-black text-xs sm:text-sm text-[#ebdcc4] uppercase tracking-widest flex items-center justify-center gap-2">
+            <div className="bg-[#be3519] py-2 px-4 sm:px-6 text-center border-t-2 border-[#522a25]">
+              <p className="font-display font-black text-[11px] sm:text-sm text-[#ebdcc4] uppercase tracking-widest flex items-center justify-center gap-2">
                 <Palette size={16} /> CIRCUIT SCHEMATICS • UI WIREFRAMES • RANDOM IDEAS
               </p>
             </div>
@@ -168,7 +168,7 @@ export default function NotesSkillPillsSection({ onSelectImage }: NotesProps) {
           >
             {/* Top Subheader with Add Note Button */}
             <div className="flex items-center justify-between border-b border-dashed border-[#be3519]/40 pb-2">
-              <span className="font-script text-2xl text-[#be3519] font-bold">
+              <span className="font-script text-xl sm:text-2xl text-[#be3519] font-bold">
                 Pinned Lab Post-Its 📌
               </span>
 
@@ -180,7 +180,7 @@ export default function NotesSkillPillsSection({ onSelectImage }: NotesProps) {
               </button>
             </div>
 
-            {/* ADD NEW IDEA FORM MODAL / COLLAPSIBLE */}
+            {/* ADD NEW IDEA FORM */}
             <AnimatePresence>
               {isAddingNote && (
                 <motion.form
@@ -188,7 +188,7 @@ export default function NotesSkillPillsSection({ onSelectImage }: NotesProps) {
                   animate={{ opacity: 1, height: 'auto' }}
                   exit={{ opacity: 0, height: 0 }}
                   onSubmit={handleAddIdea}
-                  className="bg-[#ebdcc4] border-2 border-[#be3519] p-4 rounded-2xl space-y-3 shadow-md"
+                  className="bg-[#ebdcc4] border-2 border-[#be3519] p-3.5 sm:p-4 rounded-2xl space-y-3 shadow-md"
                 >
                   <span className="font-display font-black text-xs text-[#be3519] uppercase tracking-wider block">
                     PIN A RANDOM IDEA TO THE BOARD 📌
@@ -200,7 +200,7 @@ export default function NotesSkillPillsSection({ onSelectImage }: NotesProps) {
                     placeholder="Write your 3am hardware or software idea..."
                     value={newIdeaText}
                     onChange={(e) => setNewIdeaText(e.target.value)}
-                    className="w-full bg-[#dfdac3] text-[#522a25] placeholder:text-[#522a25]/60 p-2.5 rounded-xl font-script text-lg font-bold border border-[#be3519] focus:outline-none focus:ring-2 focus:ring-[#be3519] resize-none"
+                    className="w-full bg-[#dfdac3] text-[#522a25] placeholder:text-[#522a25]/60 p-2.5 rounded-xl font-script text-base sm:text-lg font-bold border border-[#be3519] focus:outline-none focus:ring-2 focus:ring-[#be3519] resize-none"
                   />
 
                   <div className="flex items-center gap-2">
@@ -223,7 +223,7 @@ export default function NotesSkillPillsSection({ onSelectImage }: NotesProps) {
             </AnimatePresence>
 
             {/* PINNED STICKY NOTES GRID */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[260px] overflow-y-auto no-scrollbar pr-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[280px] overflow-y-auto no-scrollbar pr-1">
               {ideas.map((idea) => (
                 <motion.div
                   key={idea.id}
@@ -231,7 +231,7 @@ export default function NotesSkillPillsSection({ onSelectImage }: NotesProps) {
                   initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   whileHover={{ scale: 1.04, rotate: 0 }}
-                  className={`p-3.5 rounded-2xl border-2 shadow-md flex flex-col justify-between space-y-2 transform transition-transform cursor-pointer ${idea.color} ${idea.rotate}`}
+                  className={`p-3 sm:p-3.5 rounded-2xl border-2 shadow-md flex flex-col justify-between space-y-2 transform transition-transform cursor-pointer ${idea.color} ${idea.rotate}`}
                 >
                   {/* Pin Graphic Icon */}
                   <div className="flex items-center justify-between">
@@ -242,25 +242,25 @@ export default function NotesSkillPillsSection({ onSelectImage }: NotesProps) {
                   </div>
 
                   {/* Note Text */}
-                  <p className="font-script text-base font-bold leading-tight">
+                  <p className="font-script text-sm sm:text-base font-bold leading-tight">
                     "{idea.text}"
                   </p>
 
                   {/* Author Tag */}
-                  <div className="border-t border-current/20 pt-1 text-[10px] font-mono font-bold uppercase tracking-wider text-right opacity-90">
+                  <div className="border-t border-current/20 pt-1 text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-right opacity-90">
                     — {idea.author}
                   </div>
                 </motion.div>
               ))}
             </div>
 
-            {/* DESIGNER TOOL PILLS CAROUSEL */}
+            {/* DESIGNER TOOL PILLS */}
             <div className="bg-[#f49799]/40 border-2 border-dashed border-[#be3519] p-3 rounded-2xl space-y-2">
-              <span className="font-mono text-[10px] font-bold text-[#be3519] uppercase tracking-widest block text-center">
+              <span className="font-mono text-[9px] sm:text-[10px] font-bold text-[#be3519] uppercase tracking-widest block text-center">
                 LAB STACK & DESIGNER TOOLKIT PILLS
               </span>
 
-              <div className="flex flex-wrap items-center justify-center gap-3">
+              <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
                 {pillImages.map((pill, idx) => (
                   <motion.div
                     key={pill.name}
@@ -271,7 +271,7 @@ export default function NotesSkillPillsSection({ onSelectImage }: NotesProps) {
                     <img 
                       src={pill.src} 
                       alt={pill.name} 
-                      className="h-8 sm:h-9 w-auto object-contain select-none"
+                      className="h-7 sm:h-9 w-auto object-contain select-none"
                     />
                   </motion.div>
                 ))}
