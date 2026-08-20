@@ -5,13 +5,26 @@ import { useRetroAudio } from '@/lib/useRetroAudio';
 
 const CORE_MEMBERS = [
   {
+    id: 'nikita',
+    name: 'Nikita',
+    role: 'Web3 & Decentralized Mesh Networks',
+    tag: 'Maker #01',
+    note: 'runs nodes on solar power',
+    image: '/assets/hero_portrait_7.png',
+    tilt: 'rotate-[-1.2deg]',
+    cardBg: 'bg-[#fdf2f8]',
+    tagBg: 'bg-[#fed7e2] text-[#9d174d]',
+    borderColor: 'border-[#db2777]',
+    textColor: 'text-[#9d174d]',
+  },
+  {
     id: 'parul',
     name: 'Parul',
     role: 'Full-Stack & Hardware / Core Hacker',
-    tag: 'Maker #01',
+    tag: 'Maker #02',
     note: 'builds IoT rigs at 3AM',
     image: '/assets/hero_portrait_1.png',
-    tilt: 'rotate-[-1.5deg]',
+    tilt: 'rotate-[1.5deg]',
     cardBg: 'bg-[#fffbeb]',
     tagBg: 'bg-[#fef08a] text-[#854d0e]',
     borderColor: 'border-[#ca8a04]',
@@ -21,10 +34,10 @@ const CORE_MEMBERS = [
     id: 'kritika',
     name: 'Kritika',
     role: 'Systems & Backend / Protocol Engineer',
-    tag: 'Maker #02',
+    tag: 'Maker #03',
     note: 'recursively breaks things',
     image: '/assets/hero_portrait_2.png',
-    tilt: 'rotate-[2deg]',
+    tilt: 'rotate-[-2deg]',
     cardBg: 'bg-[#f0f9ff]',
     tagBg: 'bg-[#bae6fd] text-[#0369a1]',
     borderColor: 'border-[#0284c7]',
@@ -34,10 +47,10 @@ const CORE_MEMBERS = [
     id: 'prachi',
     name: 'Prachi',
     role: 'Frontend Architect & Creative Tech',
-    tag: 'Maker #03',
+    tag: 'Maker #04',
     note: 'pixel-perfect shader enthusiast',
     image: '/assets/hero_portrait_3.png',
-    tilt: 'rotate-[-2deg]',
+    tilt: 'rotate-[1.8deg]',
     cardBg: 'bg-[#f0fdf4]',
     tagBg: 'bg-[#bbf7d0] text-[#15803d]',
     borderColor: 'border-[#16a34a]',
@@ -47,10 +60,10 @@ const CORE_MEMBERS = [
     id: 'anu',
     name: 'Anu',
     role: 'Embedded Systems & Firmware',
-    tag: 'Maker #04',
+    tag: 'Maker #05',
     note: 'solders faster than she types',
     image: '/assets/hero_portrait_4.png',
-    tilt: 'rotate-[1.5deg]',
+    tilt: 'rotate-[-1.5deg]',
     cardBg: 'bg-[#fff7ed]',
     tagBg: 'bg-[#fed7aa] text-[#9a3412]',
     borderColor: 'border-[#ea580c]',
@@ -60,10 +73,10 @@ const CORE_MEMBERS = [
     id: 'nidhi',
     name: 'Nidhi',
     role: 'AI & Data Tools / Research',
-    tag: 'Maker #05',
+    tag: 'Maker #06',
     note: 'training local models on laptops',
     image: '/assets/hero_portrait_5.png',
-    tilt: 'rotate-[-2.5deg]',
+    tilt: 'rotate-[2deg]',
     cardBg: 'bg-[#fff1f2]',
     tagBg: 'bg-[#fecdd3] text-[#be123c]',
     borderColor: 'border-[#e11d48]',
@@ -73,27 +86,14 @@ const CORE_MEMBERS = [
     id: 'madhuri',
     name: 'Madhuri',
     role: 'Product Strategy & Distributed Systems',
-    tag: 'Maker #06',
+    tag: 'Maker #07',
     note: 'shipping zero to one',
     image: '/assets/hero_portrait_6.png',
-    tilt: 'rotate-[1.8deg]',
+    tilt: 'rotate-[-1.8deg]',
     cardBg: 'bg-[#f5f3ff]',
     tagBg: 'bg-[#ddd6fe] text-[#6d28d9]',
     borderColor: 'border-[#7c3aed]',
     textColor: 'text-[#6d28d9]',
-  },
-  {
-    id: 'nikita',
-    name: 'Nikita',
-    role: 'Web3 & Decentralized Mesh Networks',
-    tag: 'Maker #07',
-    note: 'runs nodes on solar power',
-    image: '/assets/hero_portrait_7.png',
-    tilt: 'rotate-[-1.2deg]',
-    cardBg: 'bg-[#fdf2f8]',
-    tagBg: 'bg-[#fed7e2] text-[#9d174d]',
-    borderColor: 'border-[#db2777]',
-    textColor: 'text-[#9d174d]',
   },
 ];
 
@@ -108,15 +108,17 @@ export default function WrappedSection({ onSelectImage }: WrappedSectionProps) {
     <div className="w-full flex-grow p-4 sm:p-6 md:p-10 flex flex-col gap-12 sm:gap-16 md:gap-24 max-w-[1400px] mx-auto select-none overflow-hidden">
       
       {/* =========================================================================
-          COMMUNITY WALL HEADER
+          COMMUNITY WALL HEADER (NON-OVERLAPPING FLEX LAYOUT)
           ========================================================================= */}
-      <header className="relative z-10 border-b-4 border-[#1c1917] pb-4 sm:pb-6 mb-4 mt-2 md:mt-6">
-        <h2 className="font-display-xl text-4xl xs:text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-[#1c1917] tracking-tighter uppercase leading-none mix-blend-multiply">
-          Community<br />Wall
-        </h2>
+      <header className="relative z-10 border-b-4 border-[#1c1917] pb-4 sm:pb-6 mb-4 mt-2 md:mt-6 flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6">
+        <div>
+          <h2 className="font-display-xl text-4xl xs:text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-[#1c1917] tracking-tighter uppercase leading-none mix-blend-multiply">
+            Community<br />Wall
+          </h2>
+        </div>
         
-        {/* Floating Post-It Note */}
-        <div className="handwritten-note absolute top-0 right-0 md:right-8 p-2.5 sm:p-4 rotate-3 z-20 max-w-[160px] sm:max-w-[230px] bg-[#fef08a] border-2 border-[#1c1917] hard-shadow-xs">
+        {/* Floating Post-It Note (Cleanly position beside header, no overlap) */}
+        <div className="handwritten-note p-3 sm:p-4 rotate-2 z-20 max-w-[240px] bg-[#fef08a] border-2 border-[#1c1917] hard-shadow-xs relative self-start md:self-auto mb-1">
           <div className="absolute -top-2.5 -left-2.5 sm:-top-3 sm:-left-3 text-[#1c1917]">
             <Pin size={18} className="fill-[#dc2626] text-[#1c1917]" />
           </div>
@@ -127,12 +129,12 @@ export default function WrappedSection({ onSelectImage }: WrappedSectionProps) {
       </header>
 
       {/* =========================================================================
-          CORE 7 MEMBERS GRID (VIBRANT COLORFUL ZINE CARDS)
+          CORE 7 MEMBERS GRID (NIKITA AS MAKER #01)
           ========================================================================= */}
       <section className="relative">
         <div className="flex items-center gap-2.5 sm:gap-3 mb-6 sm:mb-8 border-b-3 border-dashed border-[#ea580c] pb-2.5 sm:pb-3">
           <Users size={26} className="text-[#ea580c]" />
-          <h3 className="font-headline-lg text-xl sm:text-3xl text-[#1c1917] uppercase">
+          <h3 className="font-headline-lg text-xl sm:text-3xl text-[#1c1917] uppercase font-black">
             The Makers Collective ({CORE_MEMBERS.length})
           </h3>
         </div>

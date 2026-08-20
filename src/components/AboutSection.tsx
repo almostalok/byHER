@@ -23,9 +23,9 @@ export default function AboutSection({ onNavigate }: AboutSectionProps) {
             SO, THIS<br />
             <span className="text-[#ea580c] ml-4 sm:ml-6 md:ml-12">IS US.</span>
 
-            {/* Handwritten Floating Note */}
-            <div className="absolute -top-7 sm:-top-12 right-0 md:-right-8 bg-[#fef08a] p-2.5 sm:p-4 zine-rotation-2 font-annotation text-xs sm:text-sm max-w-[170px] sm:max-w-[210px] hard-shadow-xs border-2 border-[#1c1917] text-[#854d0e] font-black">
-              *A DEAD CODE SOCIETY initiative.
+            {/* Handwritten Floating Note with clear spacing */}
+            <div className="absolute -top-7 sm:-top-12 right-0 md:-right-8 bg-[#fef08a] px-3 py-2 sm:p-4 zine-rotation-2 font-annotation text-xs sm:text-sm max-w-[200px] sm:max-w-[240px] hard-shadow-xs border-2 border-[#1c1917] text-[#854d0e] font-black tracking-normal leading-tight">
+              * A&nbsp;DEAD&nbsp;CODERS&nbsp;SOCIETY initiative.
             </div>
           </h2>
 
@@ -34,7 +34,7 @@ export default function AboutSection({ onNavigate }: AboutSectionProps) {
               <Pin size={20} className="text-[#ea580c] fill-[#ea580c]" />
             </div>
             <p className="font-body-md text-sm sm:text-base md:text-lg text-[#1c1917] max-w-2xl leading-relaxed font-medium">
-              We are a collective operating under the <strong className="font-black text-[#ea580c] bg-[#ffedd5] px-1.5 py-0.5 border border-[#ea580c] rounded">DEAD CODE SOCIETY</strong>. We build tools, we break systems, and we document the wreckage. This isn&apos;t just about code; it&apos;s about claiming space and owning the technical infrastructure.
+              We are a collective operating under the <strong className="font-black text-[#ea580c] bg-[#ffedd5] px-1.5 py-0.5 border border-[#ea580c] rounded">DEAD CODERS SOCIETY</strong>. We build tools, we break systems, and we document the wreckage. This isn&apos;t just about code; it&apos;s about claiming space and owning the technical infrastructure.
             </p>
           </div>
         </div>
@@ -107,12 +107,12 @@ export default function AboutSection({ onNavigate }: AboutSectionProps) {
       </section>
 
       {/* =========================================================================
-          PRINCIPLES MANIFESTO (COLORFUL BADGES & ICONS)
+          PRINCIPLES MANIFESTO (TITLE IN SINGLE LINE)
           ========================================================================= */}
       <section className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 mb-16 sm:mb-24 md:mb-32 relative">
-        <div className="md:col-span-4 flex flex-col justify-end pb-2 sm:pb-4">
-          <h3 className="font-display-xl text-5xl sm:text-7xl md:text-[84px] leading-none text-[#ea580c] break-words">
-            PRIN<br />CIPLES
+        <div className="md:col-span-4 flex flex-col justify-start md:justify-end pb-2 sm:pb-4">
+          <h3 className="font-display-xl text-4xl sm:text-6xl md:text-7xl text-[#ea580c] whitespace-nowrap">
+            PRINCIPLES
           </h3>
         </div>
 

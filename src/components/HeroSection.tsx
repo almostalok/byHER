@@ -1,17 +1,17 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Lightbulb, Hammer, Bug, Rocket, FolderOpen, ArrowRight, ArrowDown, ExternalLink, PlusSquare, Paperclip, Pin } from 'lucide-react';
+import { Lightbulb, Hammer, Bug, Rocket, FolderOpen, ArrowRight, ArrowDown, ExternalLink, PlusSquare, Paperclip, Pin, Sparkles } from 'lucide-react';
 import { useRetroAudio } from '@/lib/useRetroAudio';
 
 const HERO_MEMBERS = [
-  { id: '1', name: 'Parul', tilt: '-rotate-2', image: '/assets/hero_portrait_1.png', tagBg: 'bg-[#fef08a] text-[#854d0e] border-[#ca8a04]' },
-  { id: '2', name: 'Kritika', tilt: 'rotate-3', image: '/assets/hero_portrait_2.png', tagBg: 'bg-[#bae6fd] text-[#0369a1] border-[#0284c7]' },
-  { id: '3', name: 'Prachi', tilt: '-rotate-1', image: '/assets/hero_portrait_3.png', tagBg: 'bg-[#bbf7d0] text-[#15803d] border-[#16a34a]' },
-  { id: '4', name: 'Anu', tilt: 'rotate-2', image: '/assets/hero_portrait_4.png', tagBg: 'bg-[#fed7aa] text-[#9a3412] border-[#ea580c]' },
-  { id: '5', name: 'Nidhi', tilt: '-rotate-3', image: '/assets/hero_portrait_5.png', tagBg: 'bg-[#fecdd3] text-[#be123c] border-[#e11d48]' },
-  { id: '6', name: 'Madhuri', tilt: 'rotate-1', image: '/assets/hero_portrait_6.png', tagBg: 'bg-[#ddd6fe] text-[#6d28d9] border-[#7c3aed]' },
-  { id: '7', name: 'Nikita', tilt: '-rotate-2', image: '/assets/hero_portrait_7.png', tagBg: 'bg-[#fed7e2] text-[#9d174d] border-[#db2777]' },
+  { id: '1', name: 'Nikita', tilt: '-rotate-2', image: '/assets/hero_portrait_7.png', tagBg: 'bg-[#fed7e2] text-[#9d174d] border-[#db2777]' },
+  { id: '2', name: 'Parul', tilt: 'rotate-2', image: '/assets/hero_portrait_1.png', tagBg: 'bg-[#fef08a] text-[#854d0e] border-[#ca8a04]' },
+  { id: '3', name: 'Kritika', tilt: '-rotate-3', image: '/assets/hero_portrait_2.png', tagBg: 'bg-[#bae6fd] text-[#0369a1] border-[#0284c7]' },
+  { id: '4', name: 'Prachi', tilt: 'rotate-1', image: '/assets/hero_portrait_3.png', tagBg: 'bg-[#bbf7d0] text-[#15803d] border-[#16a34a]' },
+  { id: '5', name: 'Anu', tilt: '-rotate-2', image: '/assets/hero_portrait_4.png', tagBg: 'bg-[#fed7aa] text-[#9a3412] border-[#ea580c]' },
+  { id: '6', name: 'Nidhi', tilt: 'rotate-3', image: '/assets/hero_portrait_5.png', tagBg: 'bg-[#fecdd3] text-[#be123c] border-[#e11d48]' },
+  { id: '7', name: 'Madhuri', tilt: '-rotate-1', image: '/assets/hero_portrait_6.png', tagBg: 'bg-[#ddd6fe] text-[#6d28d9] border-[#7c3aed]' },
 ];
 
 interface HeroSectionProps {
@@ -141,7 +141,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
         </div>
 
         {/* =======================================================================
-            BOTTOM CUTOUT MEMBER CAROUSEL (RESPONSIVE TOUCH SCROLL / MARQUEE)
+            BOTTOM CUTOUT MEMBER CAROUSEL (NIKITA AS MAKER #01)
             ======================================================================= */}
         <div className="relative w-full overflow-hidden pt-1 pb-1 sm:pb-2 z-20 shrink-0">
           
@@ -185,18 +185,24 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
       </section>
 
       {/* =========================================================================
-          INTRO WORKFLOW PIPELINE: SO... WHAT IS byHER? (MOBILE GRID FRIENDLY)
+          INTRO WORKFLOW PIPELINE: SO... WHAT IS byHER? (HIGHLIGHTED BACKGROUND)
           ========================================================================= */}
       <section className="py-14 sm:py-20 md:py-24 px-4 md:px-10 bg-[#fffaf5] dotted-bg border-b-3 border-[#1c1917] relative">
         <div className="max-w-[1280px] mx-auto grid grid-cols-12 gap-6 sm:gap-8 items-center">
           
+          {/* Highlighted Background Card for Title & Description */}
           <div className="col-span-12 md:col-span-4 flex flex-col justify-start">
-            <h2 className="font-headline-lg text-2xl sm:text-4xl md:text-5xl text-[#1c1917] uppercase mb-2 sm:mb-4 border-b-4 border-[#ea580c] pb-2 inline-block">
-              SO... WHAT IS byHER?
-            </h2>
-            <p className="font-annotation text-sm sm:text-base md:text-lg text-[#57534e] mt-1 sm:mt-2 leading-relaxed font-semibold">
-              A maker collective that skips the networking panels and goes straight to the code and hardware benches.
-            </p>
+            <div className="bg-[#ffffff] p-5 sm:p-7 border-3 border-[#1c1917] hard-shadow relative rotate-[-0.5deg]">
+              <div className="absolute -top-3 -left-3 bg-[#fef08a] border-2 border-[#1c1917] p-1 shadow-xs rounded-sm">
+                <Sparkles size={18} className="text-[#ea580c]" />
+              </div>
+              <h2 className="font-headline-lg text-2xl sm:text-3xl md:text-4xl text-[#1c1917] uppercase mb-3 border-b-4 border-[#ea580c] pb-2 inline-block font-black">
+                SO... WHAT IS byHER?
+              </h2>
+              <p className="font-annotation text-sm sm:text-base text-[#44403c] leading-relaxed font-bold">
+                A maker collective that skips the networking panels and goes straight to the code and hardware benches.
+              </p>
+            </div>
           </div>
 
           <div className="col-span-12 md:col-span-8 flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 py-6 sm:py-10 px-4 sm:px-8 bg-[#ffffff] border-3 border-[#1c1917] hard-shadow tilt-right relative z-10">
