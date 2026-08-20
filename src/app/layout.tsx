@@ -1,11 +1,25 @@
 import type { Metadata } from 'next';
-import { Satisfy, Bebas_Neue, Plus_Jakarta_Sans, Playfair_Display, Space_Grotesk } from 'next/font/google';
+import { Archivo_Narrow, Bricolage_Grotesque, Hanken_Grotesk, Bebas_Neue, Satisfy } from 'next/font/google';
 import './globals.css';
 
-const satisfy = Satisfy({
+const archivoNarrow = Archivo_Narrow({
   subsets: ['latin'],
-  variable: '--font-script',
-  weight: ['400'],
+  variable: '--font-archivo',
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+});
+
+const bricolageGrotesque = Bricolage_Grotesque({
+  subsets: ['latin'],
+  variable: '--font-bricolage',
+  weight: ['400', '500', '600', '700', '800'],
+  display: 'swap',
+});
+
+const hankenGrotesk = Hanken_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-hanken',
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
   display: 'swap',
 });
 
@@ -16,44 +30,29 @@ const bebasNeue = Bebas_Neue({
   display: 'swap',
 });
 
-const plusJakarta = Plus_Jakarta_Sans({
+const satisfy = Satisfy({
   subsets: ['latin'],
-  variable: '--font-display',
-  weight: ['400', '500', '600', '700', '800'],
-  display: 'swap',
-});
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  variable: '--font-serif',
-  weight: ['400', '600', '700', '800'],
-  display: 'swap',
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  variable: '--font-space',
-  weight: ['400', '500', '600', '700'],
+  variable: '--font-script',
+  weight: ['400'],
   display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: 'byHER | Led by Her, Built for All',
-  description: 'An organization for women building software and hardware products from zero to one while learning skills and networking. Led by her, built for all.',
+  title: 'byHER | Led by her. Built for all.',
+  description: 'A collective of builders, breakers, and thinkers under the DEAD CODE SOCIETY. Less talk about tech, more actually building tech.',
   keywords: [
     'byHER',
+    'DEAD CODE SOCIETY',
     'Women in Tech',
-    'Hardware & Software',
-    'Zero to One',
     'Makers Collective',
-    'Embedded Systems',
+    'Analog Tech Zine',
+    'Zero to One',
     'Software Engineering',
-    'Networking',
-    'Skill Learning'
+    'Hardware & Web3'
   ],
   openGraph: {
-    title: 'byHER | Led by Her, Built for All',
-    description: 'An organization for women building software and hardware products from zero to one while learning skills and networking.',
+    title: 'byHER | Led by her. Built for all.',
+    description: 'A collective of builders, breakers, and thinkers under the DEAD CODE SOCIETY. Less talk about tech, more actually building tech.',
     type: 'website',
   },
   icons: {
@@ -71,9 +70,12 @@ export default function RootLayout({
   return (
     <html 
       lang="en" 
-      className={`${satisfy.variable} ${bebasNeue.variable} ${plusJakarta.variable} ${playfair.variable} ${spaceGrotesk.variable}`}
+      className={`${archivoNarrow.variable} ${bricolageGrotesque.variable} ${hankenGrotesk.variable} ${bebasNeue.variable} ${satisfy.variable} light`}
     >
-      <body className="antialiased min-h-screen selection:bg-[#be3519] selection:text-[#ebdcc4] font-display">
+      <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+      </head>
+      <body className="antialiased min-h-screen bg-[#fff8f7] text-[#241918] selection:bg-[#9e4037] selection:text-[#ffffff] font-body-md">
         {children}
       </body>
     </html>

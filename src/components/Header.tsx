@@ -1,227 +1,267 @@
 'use client';
 
 import { useState } from 'react';
-import { Menu, X, Volume2, VolumeX, Monitor, Gamepad2 } from 'lucide-react';
+import { Volume2, VolumeX, Monitor, Gamepad2, Menu, X, Info, Rocket, Users, UserPlus } from 'lucide-react';
 import { useRetroAudio } from '@/lib/useRetroAudio';
 
 interface HeaderProps {
-  onNavigate?: (sectionId: string) => void;
+  currentTab: string;
+  onNavigate: (tabId: string) => void;
   onToggleCrt?: () => void;
   isCrtOn?: boolean;
   onOpenCheats?: () => void;
 }
 
-export default function Header({ onNavigate, onToggleCrt, isCrtOn = false, onOpenCheats }: HeaderProps) {
+export default function Header({
+  currentTab,
+  onNavigate,
+  onToggleCrt,
+  isCrtOn = false,
+  onOpenCheats,
+}: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { isMuted, toggleMute, playClick } = useRetroAudio();
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
-    e.preventDefault();
+  const handleNav = (tabId: string) => {
     playClick();
+    onNavigate(tabId);
     setMobileMenuOpen(false);
-    if (onNavigate) {
-      onNavigate(sectionId);
-    } else {
-      const el = document.getElementById(sectionId);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
-      }
-    }
   };
 
   return (
-    <header className="w-full bg-[#f49799] border-b border-[#be3519]/20 h-16 sm:h-20 flex-shrink-0 relative z-30 select-none">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
+    <>
+      {/* Top Navigation Bar (Web & Mobile Header) */}
+      <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 md:px-10 py-2.5 sm:py-3.5 bg-[#fff8f7] border-b-2 border-[#9e4037] shadow-[4px_4px_0px_0px_rgba(36,25,24,1)] transition-all duration-100 select-none">
         
-        {/* Brand Logo / Signature with byHER Icon */}
-        <a 
-          href="#hero"
-          onClick={(e) => handleNavClick(e, 'hero')}
-          className="flex items-center gap-2 sm:gap-3 group cursor-pointer"
+        {/* Brand Logo with Image & Text */}
+        <div 
+          onClick={() => handleNav('home')}
+          className="flex items-center gap-2.5 sm:gap-3 group cursor-pointer"
         >
           <img 
             src="/assets/byher_logo_chocolate.png" 
             alt="byHER Logo Icon" 
-            className="h-7 sm:h-10 w-auto object-contain transform group-hover:rotate-6 group-hover:scale-110 transition-transform duration-300 drop-shadow-sm"
+            className="h-8 sm:h-10 w-auto object-contain transform group-hover:rotate-6 group-hover:scale-110 transition-transform duration-300 drop-shadow-xs"
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = '/assets/byher_logo_crimson.png';
+            }}
           />
-          <span className="font-script text-3xl sm:text-5xl text-[#522a25] font-bold group-hover:text-[#be3519] transition-colors leading-none">
+          <span className="font-display-xl text-3xl sm:text-4xl text-[#9e4037] tracking-tighter hover:translate-x-[1px] hover:translate-y-[1px] active:scale-95 transition-all">
             byHER
           </span>
-        </a>
+        </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-5 text-xs sm:text-sm font-bold tracking-[0.2em] text-[#be3519]">
-          <a 
-            href="#about" 
-            onClick={(e) => handleNavClick(e, 'about')}
-            className="py-1 px-2 border-b-2 border-transparent hover:border-dashed hover:border-[#be3519] hover:text-[#522a25] transition-all uppercase cursor-pointer"
+        {/* Desktop Navigation Links */}
+        <div className="hidden md:flex items-center gap-6 lg:gap-8">
+          <button 
+            onClick={() => handleNav('about')}
+            className={`font-label-caps text-xs uppercase transition-all pb-1 cursor-pointer ${
+              currentTab === 'about' 
+                ? 'text-[#9e4037] font-bold border-b-2 border-[#9e4037]' 
+                : 'text-[#56423f] hover:text-[#9e4037]'
+            }`}
           >
-            ABOUT US
-          </a>
-          <span className="text-[#be3519]/40">◆</span>
-          <a 
-            href="#projects" 
-            onClick={(e) => handleNavClick(e, 'projects')}
-            className="py-1 px-2 border-b-2 border-transparent hover:border-dashed hover:border-[#be3519] hover:text-[#522a25] transition-all uppercase cursor-pointer"
+            About
+          </button>
+          <button 
+            onClick={() => handleNav('projects')}
+            className={`font-label-caps text-xs uppercase transition-all pb-1 cursor-pointer ${
+              currentTab === 'projects' 
+                ? 'text-[#9e4037] font-bold border-b-2 border-[#9e4037]' 
+                : 'text-[#56423f] hover:text-[#9e4037]'
+            }`}
           >
-            PROJECTS
-          </a>
-          <span className="text-[#be3519]/40">◆</span>
-          <a 
-            href="#community" 
-            onClick={(e) => handleNavClick(e, 'community')}
-            className="py-1 px-2 border-b-2 border-transparent hover:border-dashed hover:border-[#be3519] hover:text-[#522a25] transition-all uppercase cursor-pointer"
+            Projects
+          </button>
+          <button 
+            onClick={() => handleNav('community')}
+            className={`font-label-caps text-xs uppercase transition-all pb-1 cursor-pointer ${
+              currentTab === 'community' 
+                ? 'text-[#9e4037] font-bold border-b-2 border-[#9e4037]' 
+                : 'text-[#56423f] hover:text-[#9e4037]'
+            }`}
           >
-            COMMUNITY
-          </a>
-          <span className="text-[#be3519]/40">◆</span>
-          <a 
-            href="#contact" 
-            onClick={(e) => handleNavClick(e, 'contact')}
-            className="py-1 px-2 border-b-2 border-transparent hover:border-dashed hover:border-[#be3519] hover:text-[#522a25] transition-all uppercase cursor-pointer"
+            Community
+          </button>
+          <button 
+            onClick={() => handleNav('join')}
+            className={`font-label-caps text-xs uppercase transition-all pb-1 cursor-pointer ${
+              currentTab === 'join' 
+                ? 'text-[#9e4037] font-bold border-b-2 border-[#9e4037]' 
+                : 'text-[#56423f] hover:text-[#9e4037]'
+            }`}
           >
-            CONTACT
-          </a>
+            Join
+          </button>
+        </div>
 
-          <span className="text-[#be3519]/40">◆</span>
+        {/* Action Controls (Sound, CRT, Cheats, Join Button) */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          {/* Sound FX Toggle */}
+          <button
+            onClick={() => {
+              playClick();
+              toggleMute();
+            }}
+            className="p-1.5 text-[#9e4037] hover:scale-110 active:scale-95 transition-transform cursor-pointer"
+            title="Toggle Sound Effects [Key: M]"
+            aria-label="Toggle Sound"
+          >
+            {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
+          </button>
 
-          {/* RETRO EXPERIENCE TOGGLE BUTTONS */}
-          <div className="flex items-center gap-2 pl-2">
-            {/* Sound FX Toggle */}
+          {/* CRT Monitor Toggle */}
+          {onToggleCrt && (
             <button
               onClick={() => {
                 playClick();
-                toggleMute();
+                onToggleCrt();
               }}
-              className="bg-[#dfdac3] text-[#be3519] border border-[#be3519] hover:bg-[#be3519] hover:text-[#ebdcc4] p-1.5 rounded-full transition-colors cursor-pointer shadow-xs flex items-center gap-1 text-[11px] px-2.5 font-mono"
-              title="Toggle Retro Sound Effects [Key: M]"
+              className={`p-1.5 transition-transform hover:scale-110 active:scale-95 cursor-pointer ${
+                isCrtOn ? 'text-[#8f4a48]' : 'text-[#9e4037]'
+              }`}
+              title="Toggle Retro CRT Scanlines [Key: R]"
+              aria-label="Toggle CRT"
             >
-              {isMuted ? <VolumeX size={14} /> : <Volume2 size={14} />}
-              <span className="hidden lg:inline">{isMuted ? 'MUTED' : 'SOUND'}</span>
+              <Monitor size={20} />
             </button>
+          )}
 
-            {/* CRT FX Toggle */}
-            {onToggleCrt && (
-              <button
-                onClick={() => {
-                  playClick();
-                  onToggleCrt();
-                }}
-                className={`border p-1.5 rounded-full transition-colors cursor-pointer shadow-xs flex items-center gap-1 text-[11px] px-2.5 font-mono ${
-                  isCrtOn
-                    ? 'bg-[#be3519] text-[#ebdcc4] border-[#522a25]'
-                    : 'bg-[#dfdac3] text-[#be3519] border-[#be3519] hover:bg-[#be3519] hover:text-[#ebdcc4]'
-                }`}
-                title="Toggle 90s CRT Monitor Filter [Key: R]"
-              >
-                <Monitor size={14} />
-                <span className="hidden lg:inline">{isCrtOn ? 'CRT ON' : 'CRT FX'}</span>
-              </button>
-            )}
+          {/* Cheats Modal Toggle */}
+          {onOpenCheats && (
+            <button
+              onClick={() => {
+                playClick();
+                onOpenCheats();
+              }}
+              className="p-1.5 text-[#9e4037] hover:scale-110 active:scale-95 transition-transform cursor-pointer"
+              title="Keyboard Cheats [Key: ?]"
+              aria-label="Keyboard Cheats"
+            >
+              <Gamepad2 size={20} />
+            </button>
+          )}
 
-            {/* Cheats Modal Toggle */}
-            {onOpenCheats && (
-              <button
-                onClick={() => {
-                  playClick();
-                  onOpenCheats();
-                }}
-                className="bg-[#be3519] text-[#ebdcc4] border border-[#522a25] hover:bg-[#522a25] p-1.5 rounded-full transition-colors cursor-pointer shadow-xs flex items-center gap-1 text-[11px] px-2.5 font-mono"
-                title="View Keyboard Cheat Sheet [Key: ?]"
-              >
-                <Gamepad2 size={14} />
-                <span className="hidden lg:inline">KEYS</span>
-              </button>
-            )}
+          {/* Join CTA for Desktop */}
+          <button
+            onClick={() => handleNav('join')}
+            className="hidden sm:inline-flex items-center gap-1.5 bg-[#9e4037] text-[#ffffff] font-label-caps text-xs uppercase px-3 py-1.5 border-2 border-[#241918] shadow-[2px_2px_0px_0px_rgba(36,25,24,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all cursor-pointer"
+          >
+            <UserPlus size={14} />
+            <span>Join</span>
+          </button>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => {
+              playClick();
+              setMobileMenuOpen(!mobileMenuOpen);
+            }}
+            className="md:hidden p-1.5 text-[#241918] hover:text-[#9e4037] transition-colors cursor-pointer"
+            aria-label="Toggle navigation drawer"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile Drawer (SideNavBar) */}
+      <div 
+        className={`md:hidden fixed inset-y-0 left-0 z-[60] flex flex-col p-6 h-full w-80 bg-[#fff0ef] border-r-2 border-[#9e4037] shadow-[8px_0px_0px_0px_rgba(36,25,24,1)] transform transition-transform duration-300 ease-in-out ${
+          mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        <div className="flex justify-between items-center mb-6">
+          <div 
+            onClick={() => handleNav('home')}
+            className="flex items-center gap-2.5 cursor-pointer"
+          >
+            <img 
+              src="/assets/byher_logo_chocolate.png" 
+              alt="byHER Logo" 
+              className="h-8 w-auto object-contain"
+            />
+            <span className="font-headline-lg-mobile text-3xl text-[#9e4037]">
+              byHER
+            </span>
           </div>
-        </nav>
+          <button 
+            onClick={() => setMobileMenuOpen(false)}
+            className="text-[#241918] p-1 hover:text-[#9e4037]"
+          >
+            <X size={24} />
+          </button>
+        </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => {
-            playClick();
-            setMobileMenuOpen(!mobileMenuOpen);
-          }}
-          className="md:hidden p-2 text-[#522a25] hover:text-[#be3519] focus:outline-none"
-          aria-label="Toggle menu"
+        <div className="text-[#56423f] text-sm mb-6 font-annotation italic">
+          Led by her. Built for all.
+        </div>
+
+        <div className="flex flex-col gap-2 flex-grow">
+          <button
+            onClick={() => handleNav('about')}
+            className={`flex items-center gap-4 p-3.5 rounded font-label-caps text-xs uppercase text-left transition-all ${
+              currentTab === 'about'
+                ? 'bg-[#ff8b7d] text-[#76231c] font-bold shadow-[2px_2px_0px_0px_rgba(36,25,24,1)] border border-[#9e4037]'
+                : 'text-[#241918] hover:bg-[#f4dddd]'
+            }`}
+          >
+            <Info size={18} />
+            <span>About</span>
+          </button>
+
+          <button
+            onClick={() => handleNav('projects')}
+            className={`flex items-center gap-4 p-3.5 rounded font-label-caps text-xs uppercase text-left transition-all ${
+              currentTab === 'projects'
+                ? 'bg-[#ff8b7d] text-[#76231c] font-bold shadow-[2px_2px_0px_0px_rgba(36,25,24,1)] border border-[#9e4037]'
+                : 'text-[#241918] hover:bg-[#f4dddd]'
+            }`}
+          >
+            <Rocket size={18} />
+            <span>Projects</span>
+          </button>
+
+          <button
+            onClick={() => handleNav('community')}
+            className={`flex items-center gap-4 p-3.5 rounded font-label-caps text-xs uppercase text-left transition-all ${
+              currentTab === 'community'
+                ? 'bg-[#ff8b7d] text-[#76231c] font-bold shadow-[2px_2px_0px_0px_rgba(36,25,24,1)] border border-[#9e4037]'
+                : 'text-[#241918] hover:bg-[#f4dddd]'
+            }`}
+          >
+            <Users size={18} />
+            <span>Community</span>
+          </button>
+
+          <button
+            onClick={() => handleNav('join')}
+            className={`flex items-center gap-4 p-3.5 rounded font-label-caps text-xs uppercase text-left transition-all ${
+              currentTab === 'join'
+                ? 'bg-[#ff8b7d] text-[#76231c] font-bold shadow-[2px_2px_0px_0px_rgba(36,25,24,1)] border border-[#9e4037]'
+                : 'text-[#241918] hover:bg-[#f4dddd]'
+            }`}
+          >
+            <UserPlus size={18} />
+            <span>Join Form</span>
+          </button>
+        </div>
+
+        <button 
+          onClick={() => handleNav('join')}
+          className="w-full py-3.5 bg-[#9e4037] text-[#ffffff] font-label-caps text-xs uppercase hard-shadow-sm hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all border-2 border-[#241918] cursor-pointer"
         >
-          {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+          Join Collective
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Backdrop overlay for mobile drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#f49799] border-b border-[#be3519]/30 px-6 py-6 space-y-4 text-center shadow-xl relative z-50">
-          <a 
-            href="#about"
-            onClick={(e) => handleNavClick(e, 'about')}
-            className="block text-lg font-bold text-[#be3519] hover:text-[#522a25] uppercase tracking-widest"
-          >
-            ABOUT US
-          </a>
-          <a 
-            href="#projects"
-            onClick={(e) => handleNavClick(e, 'projects')}
-            className="block text-lg font-bold text-[#be3519] hover:text-[#522a25] uppercase tracking-widest"
-          >
-            PROJECTS
-          </a>
-          <a 
-            href="#community"
-            onClick={(e) => handleNavClick(e, 'community')}
-            className="block text-lg font-bold text-[#be3519] hover:text-[#522a25] uppercase tracking-widest"
-          >
-            COMMUNITY
-          </a>
-          <a 
-            href="#contact"
-            onClick={(e) => handleNavClick(e, 'contact')}
-            className="block text-lg font-bold text-[#be3519] hover:text-[#522a25] uppercase tracking-widest"
-          >
-            CONTACT
-          </a>
-          
-          <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
-            <button
-              onClick={() => {
-                playClick();
-                toggleMute();
-              }}
-              className="bg-[#be3519] text-[#ebdcc4] px-3.5 py-1.5 rounded-full font-mono text-xs font-bold flex items-center gap-1.5"
-            >
-              {isMuted ? <VolumeX size={14} /> : <Volume2 size={14} />}
-              <span>{isMuted ? 'SOUND OFF' : 'SOUND ON'}</span>
-            </button>
-
-            {onToggleCrt && (
-              <button
-                onClick={() => {
-                  playClick();
-                  onToggleCrt();
-                }}
-                className="bg-[#be3519] text-[#ebdcc4] px-3.5 py-1.5 rounded-full font-mono text-xs font-bold flex items-center gap-1.5"
-              >
-                <Monitor size={14} />
-                <span>{isCrtOn ? 'CRT ON' : 'CRT OFF'}</span>
-              </button>
-            )}
-
-            {onOpenCheats && (
-              <button
-                onClick={() => {
-                  playClick();
-                  setMobileMenuOpen(false);
-                  onOpenCheats();
-                }}
-                className="bg-[#522a25] text-[#ebdcc4] px-3.5 py-1.5 rounded-full font-mono text-xs font-bold flex items-center gap-1.5"
-              >
-                <Gamepad2 size={14} />
-                <span>CHEATS</span>
-              </button>
-            )}
-          </div>
-        </div>
+        <div 
+          onClick={() => setMobileMenuOpen(false)}
+          className="md:hidden fixed inset-0 bg-black/40 z-50 backdrop-blur-xs"
+        />
       )}
-    </header>
+    </>
   );
 }
