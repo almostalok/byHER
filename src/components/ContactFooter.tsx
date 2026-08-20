@@ -11,15 +11,20 @@ export default function ContactFooter({ hasSideNav = false }: ContactFooterProps
   const { playClick } = useRetroAudio();
 
   return (
-    <footer className={`w-full mt-auto py-8 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-6 bg-[#241918] border-t-4 border-[#8f4a48] text-[#fff8f7] relative z-30 select-none ${
+    <footer className={`w-full mt-auto py-10 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-6 bg-[#1c1917] border-t-4 border-[#ea580c] text-[#fafaf9] relative z-30 select-none ${
       hasSideNav ? 'md:pl-10' : ''
     }`}>
-      {/* Brand / Logo */}
+      {/* Brand / Logo with NO box, real colors */}
       <div className="flex items-center gap-3">
-        <span className="font-display-xl text-2xl tracking-tight text-[#ffdad7] uppercase border border-[#fff8f7]/40 px-2.5 py-0.5">
+        <img 
+          src="/assets/byher_logo_cream.png" 
+          alt="byHER Logo" 
+          className="h-7 w-auto object-contain"
+        />
+        <span className="font-display-xl text-3xl tracking-tight text-[#fed7aa]">
           byHER
         </span>
-        <span className="font-annotation text-sm text-[#dcc0bc] italic hidden sm:inline">
+        <span className="font-annotation text-sm text-[#d6d3d1] italic hidden sm:inline ml-2">
           Led by her. Built for all.
         </span>
       </div>
@@ -31,41 +36,39 @@ export default function ContactFooter({ hasSideNav = false }: ContactFooterProps
           target="_blank" 
           rel="noopener noreferrer"
           onClick={playClick}
-          className="text-[#dcc0bc] hover:text-[#ffdad5] transition-colors underline decoration-dotted underline-offset-4 flex items-center gap-1"
+          className="text-[#fed7aa] hover:text-[#ffffff] transition-colors underline decoration-dotted underline-offset-4 flex items-center gap-1 font-bold"
         >
           <span>A DEAD CODE SOCIETY initiative.</span>
           <ArrowUpRight size={14} />
         </a>
       </div>
 
-      {/* Right: Social Links */}
-      <div className="flex items-center gap-3 text-xs sm:text-sm font-label-caps uppercase tracking-wider text-[#dcc0bc]">
+      {/* Right: Social Links with vibrant pills */}
+      <div className="flex items-center gap-2 text-xs sm:text-sm font-label-caps uppercase tracking-wider">
         <a 
           href="https://www.instagram.com" 
           target="_blank" 
           rel="noopener noreferrer"
           onClick={playClick}
-          className="hover:text-[#ffb4aa] transition-colors"
+          className="px-2.5 py-1 bg-[#292524] hover:bg-[#ec4899] text-[#fed7aa] hover:text-[#ffffff] rounded border border-[#44403c] transition-all"
         >
           Instagram
         </a>
-        <span className="text-[#89726f]">/</span>
         <a 
           href="https://github.com" 
           target="_blank" 
           rel="noopener noreferrer"
           onClick={playClick}
-          className="hover:text-[#ffb4aa] transition-colors"
+          className="px-2.5 py-1 bg-[#292524] hover:bg-[#3b82f6] text-[#fed7aa] hover:text-[#ffffff] rounded border border-[#44403c] transition-all"
         >
           GitHub
         </a>
-        <span className="text-[#89726f]">/</span>
         <a 
           href="https://www.linkedin.com" 
           target="_blank" 
           rel="noopener noreferrer"
           onClick={playClick}
-          className="hover:text-[#ffb4aa] transition-colors"
+          className="px-2.5 py-1 bg-[#292524] hover:bg-[#0284c7] text-[#fed7aa] hover:text-[#ffffff] rounded border border-[#44403c] transition-all"
         >
           LinkedIn
         </a>
